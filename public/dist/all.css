@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Muli|Taviraj");
+body {
+  height: 200vh; }
+
+.nav-top-logo {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Taviraj", serif;
+  font-size: 18px;
+  font-weight: 150;
+  margin-top: 20px;
+  margin-bottom: 35px; }
+  .nav-top-logo .logo-style {
+    font-weight: 300;
+    font-size: 50px; }
+
+.nav-bar-container {
+  width: 100%;
+  height: 51px;
+  background: #3F3F4A;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase; }
+  .nav-bar-container #nav-collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+  .nav-bar-container #nav-accessories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+  .nav-bar-container #nav-men {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+  .nav-bar-container #nav-women {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+  .nav-bar-container #nav-watch-bands {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+  .nav-bar-container .nav-search-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.3em; }
+  .nav-bar-container .nav-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.3em; }
+  .nav-bar-container .dot-centering {
+    font-size: 7px;
+    padding-top: 21px;
+    letter-spacing: 1.5px; }
+
+.ship-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  background-color: #F4F4F4;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  color: #333333;
+  letter-spacing: 1.5px; }
