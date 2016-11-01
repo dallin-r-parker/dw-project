@@ -42,3 +42,13 @@ angular.module('dw-store').directive('navDir', function () {
 'use strict';
 
 angular.module('dw-store').controller('navDirCtrl', ["$scope", function ($scope) {}]);
+"use strict";
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
