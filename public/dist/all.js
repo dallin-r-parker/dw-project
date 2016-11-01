@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dw-store', []);
+angular.module('dw-store', ['angAccordion']);
 // .config(function($stateProvider, $urlRouterProvider) {
 //
 //     $urlRouterProvider.otherwise('/');
@@ -30,6 +30,27 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
     // })
 
 }]);
+"use strict";
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+"use strict";
+'use strict';
+
+angular.module('dw-store').directive('classicWatchDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
 'use strict';
 
 angular.module('dw-store').directive('navDir', function () {
@@ -42,13 +63,3 @@ angular.module('dw-store').directive('navDir', function () {
 'use strict';
 
 angular.module('dw-store').controller('navDirCtrl', ["$scope", function ($scope) {}]);
-"use strict";
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html'
-    };
-});
-//restrict with A,E, or AE

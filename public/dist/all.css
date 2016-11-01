@@ -29,7 +29,7 @@
 
 .classic-hero-text1 {
   margin-bottom: 10px;
-  margin-top: -45px;
+  margin-top: 68px;
   text-transform: uppercase;
   font-family: "Muli", sans-serif;
   font-size: 68px;
@@ -47,7 +47,16 @@
 .classic-hero-italic {
   font-family: "Lusitana", serif;
   font-style: italic;
-  font-size: 20px; }
+  font-size: 20px;
+  margin-bottom: 55px; }
+
+.classic-hero-more {
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+#arrow-style {
+  font-size: 2em; }
 
 .nav-top-logo {
   width: 100%;
