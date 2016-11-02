@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dw-store', ['angAccordion']);
+angular.module('dw-store', []);
 // .config(function($stateProvider, $urlRouterProvider) {
 //
 //     $urlRouterProvider.otherwise('/');
@@ -24,7 +24,17 @@ angular.module('dw-store').controller('mainCtrl', ["$scope", "mainService", func
             $scope.products = response.data;
         });
     };
+
     $scope.getProducts();
+
+    $scope.getClassic = function () {
+        console.log('checking hit');
+        mainService.getClassic().then(function (response) {
+            $scope.classics = response.data;
+        });
+    };
+
+    $scope.getClassic();
 }]);
 'use strict';
 
@@ -35,6 +45,13 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
     this.getProducts = function () {
         return $http({
             url: '/api/products',
+            method: 'GET'
+        });
+    };
+
+    this.getClassic = function () {
+        return $http({
+            url: '/api/classic',
             method: 'GET'
         });
     };

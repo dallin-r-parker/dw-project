@@ -17,6 +17,13 @@ module.exports = {
         res.send(products);
     })
 
+    },
+
+    getClassic: function (req, res, next) {
+        db.get_classic(function (error, products) {
+            console.log(error, products);
+            res.send(products)
+        })
     }
 
 

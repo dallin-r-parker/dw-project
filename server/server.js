@@ -16,6 +16,7 @@ var massiveServer = massive.connectSync({
 
 app.set('db', massiveServer);
 var db = app.get('db');
+// ===== connect database
 var dbCtrl = require('./dbCtrl');
 
 
@@ -24,7 +25,7 @@ app.post('/api/product', dbCtrl.addProduct);
 
 // ========  get methods
 app.get('/api/products', dbCtrl.getProducts);
-
+app.get('/api/classic', dbCtrl.getClassic)
 // ======  update methods
 
 
