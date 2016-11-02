@@ -1,0 +1,1 @@
+insert into dw_store (category, name, price, silver_img, gold_img, size) values ($1, $2, $3, $4, $5, $6)

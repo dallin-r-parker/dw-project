@@ -17,18 +17,27 @@ angular.module('dw-store', ['angAccordion']);
 "use strict";
 'use strict';
 
-angular.module('dw-store').controller('mainCtrl', ["$scope", function ($scope) {}]);
+angular.module('dw-store').controller('mainCtrl', ["$scope", "mainService", function ($scope, mainService) {
+
+    $scope.getProducts = function () {
+        mainService.getProducts().then(function (response) {
+            $scope.products = response.data;
+        });
+    };
+    $scope.getProducts();
+}]);
 'use strict';
 
 angular.module('dw-store').service('mainService', ["$http", function ($http) {
 
     //add $q if needed
 
-    // $http({
-    //   method: 'GET',
-    //   url: 'schedule.json'
-    // })
-
+    this.getProducts = function () {
+        return $http({
+            url: '/api/products',
+            method: 'GET'
+        });
+    };
 }]);
 "use strict";
 'use strict';
@@ -37,17 +46,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
     return {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-"use strict";
-'use strict';
-
-angular.module('dw-store').directive('classicWatchDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -63,3 +61,14 @@ angular.module('dw-store').directive('navDir', function () {
 'use strict';
 
 angular.module('dw-store').controller('navDirCtrl', ["$scope", function ($scope) {}]);
+"use strict";
+'use strict';
+
+angular.module('dw-store').directive('classicWatchDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
