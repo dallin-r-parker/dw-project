@@ -66,17 +66,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
     };
 });
 //restrict with A,E, or AE
-"use strict";
-'use strict';
-
-angular.module('dw-store').directive('classicWatchDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
 'use strict';
 
 angular.module('dw-store').directive('navDir', function () {
@@ -89,3 +78,14 @@ angular.module('dw-store').directive('navDir', function () {
 'use strict';
 
 angular.module('dw-store').controller('navDirCtrl', ["$scope", function ($scope) {}]);
+"use strict";
+'use strict';
+
+angular.module('dw-store').directive('classicWatchDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
