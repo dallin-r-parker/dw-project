@@ -73,10 +73,12 @@ angular.module('dw-store').directive('classicHeroDir', function () {
 'use strict';
 
 angular.module('dw-store').directive('classicWatchDir', function () {
-
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html'
+        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html',
+        scope: {
+            classics: '='
+        }
     };
 });
 //restrict with A,E, or AE
