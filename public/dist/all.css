@@ -58,6 +58,87 @@
 #arrow-style {
   font-size: 2em; }
 
+.classic-watch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.classic-watch-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 60px; }
+  .classic-watch-container .top-watch-style {
+    margin-bottom: 30px;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    color: #747474;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .classic-watch-container .watch-size {
+    height: 306px;
+    width: 306px; }
+  .classic-watch-container .bottom-watch-style {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: "Muli", sans-serif;
+    font-color: #747474;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 400; }
+  .classic-watch-container .watch-price-style {
+    color: #747474;
+    font-weight: 400; }
+
+.center-color-wrapper {
+  width: 100%; }
+  .center-color-wrapper .center-color-selector {
+    display: flex;
+    width: 75px; }
+    .center-color-wrapper .center-color-selector .gold-color-selection {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .silver-color-selection {
+      background-color: #D0D0D0;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer; }
+
+.center-showall {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px; }
+  .center-showall .classic-showall {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 160px;
+    background: #3A3A45; }
+    .center-showall .classic-showall #classic-showall {
+      font-family: "Muli", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400; }
+
 .nav-top-logo {
   width: 100%;
   background: #FFFFFF;
@@ -138,33 +219,3 @@
   font-size: 13px;
   color: #333333;
   letter-spacing: 1.5px; }
-
-.classic-watch-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
-
-.classic-watch-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 60px; }
-  .classic-watch-container .top-watch-style {
-    margin-bottom: 30px;
-    font-family: "Muli", sans-serif;
-    font-size: 16px;
-    color: #747474;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400; }
-  .classic-watch-container .watch-size {
-    height: 306px;
-    width: 306px; }
-  .classic-watch-container .bottom-watch-style {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    font-family: "Muli", sans-serif;
-    font-color: #747474;
-    font-size: 14px;
-    text-transform: uppercase; }
