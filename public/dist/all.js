@@ -24,17 +24,28 @@ angular.module('dw-store').controller('mainCtrl', ["$scope", "mainService", func
             $scope.products = response.data;
         });
     };
-
     $scope.getProducts();
 
     $scope.getClassic = function () {
-        console.log('checking hit');
         mainService.getClassic().then(function (response) {
             $scope.classics = response.data;
         });
     };
-
     $scope.getClassic();
+
+    $scope.getBlkClassic = function () {
+        mainService.getBlkClassic().then(function (response) {
+            $scope.blkclassics = response.data;
+        });
+    };
+    $scope.getBlkClassic();
+
+    $scope.getDapClassic = function () {
+        mainService.getDapClassic().then(function (response) {
+            $scope.dapclassics = response.data;
+        });
+    };
+    $scope.getDapClassic();
 }]);
 'use strict';
 
@@ -55,7 +66,45 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
             method: 'GET'
         });
     };
+
+    this.getBlkClassic = function () {
+        return $http({
+            url: '/api/blkclassic',
+            method: 'GET'
+        });
+    };
+
+    this.getDapClassic = function () {
+        return $http({
+            url: '/api/dapclassic',
+            method: 'GET'
+        });
+    };
 }]);
+'use strict';
+
+angular.module('dw-store').directive('blkClassicHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
+
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('blkClassicWatchDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/blkClassicWatch/blk-classic-watch-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
 'use strict';
 
 angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
@@ -79,6 +128,34 @@ angular.module('dw-store').directive('classicWatchDir', function () {
         scope: {
             classics: '='
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('dapWatchCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('dapWatchDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/dapWatch/dap-watch-tmpl.html',
+        controller: 'dapWatchCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('dapHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('dapHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/dapHero/dap-hero-tmpl.html',
+        controller: 'dapHeroCtrl'
     };
 });
 //restrict with A,E, or AE
