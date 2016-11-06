@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400");
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 @import url("https://fonts.googleapis.com/css?family=Muli|Taviraj");
+.btm-description-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .btm-description-wrapper .btm-description-container {
+    width: 83%;
+    text-align: center;
+    margin-top: 53px;
+    margin-bottom: 80px; }
+  .btm-description-wrapper .btm-content {
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 34px; }
+
+.classic-full-wrapper {
+  width: 97%;
+  max-width: 1414px;
+  margin: 0 auto; }
+
 .classic-hero-container {
   overflow: hidden;
   position: relative;
@@ -9,6 +29,7 @@
   margin-top: 3vh;
   text-align: center; }
   .classic-hero-container img {
+    width: 100%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -55,21 +76,303 @@
   font-size: 16px;
   text-transform: uppercase; }
 
-#arrow-style {
+#up-arrow-style {
   font-size: 2em; }
+
+.readmore-wrapper {
+  background: #f4f4f4;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; }
+  .readmore-wrapper .readmore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .readmore-wrapper .readmore-container #style-readmore-img {
+      margin-top: 72px;
+      margin-bottom: 56px;
+      text-align: center; }
+      .readmore-wrapper .readmore-container #style-readmore-img img {
+        width: 371px;
+        height: 403px; }
+    .readmore-wrapper .readmore-container .style-readmore-text {
+      text-align: center; }
+      .readmore-wrapper .readmore-container .style-readmore-text .classic-toggle-text {
+        margin-bottom: 48px;
+        font-family: "Taviraj", serif;
+        font-size: 18px;
+        line-height: 27px;
+        color: #4F4F4F; }
+      .readmore-wrapper .readmore-container .style-readmore-text .close-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 45px; }
+      .readmore-wrapper .readmore-container .style-readmore-text #close-arrow-style {
+        font-size: 2em;
+        color: #4F4F4F; }
+      .readmore-wrapper .readmore-container .style-readmore-text .classic-hero-close {
+        font-family: "Muli", sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #4F4F4F; }
+
+.classic-watch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.classic-watch-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 60px; }
+  .classic-watch-container .top-watch-style {
+    margin-bottom: 30px;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    color: #747474;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .classic-watch-container .watch-size {
+    height: 306px;
+    width: 306px; }
+  .classic-watch-container .bottom-watch-style {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: "Muli", sans-serif;
+    font-color: #747474;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 400; }
+  .classic-watch-container .watch-price-style {
+    color: #747474;
+    font-weight: 400; }
+
+.center-color-wrapper {
+  width: 100%; }
+  .center-color-wrapper .center-color-selector {
+    display: flex;
+    justify-content: center; }
+    .center-color-wrapper .center-color-selector .gold-color-selection {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .silver-color-selection {
+      margin-left: 10px;
+      background-color: #D0D0D0;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer; }
+
+.center-showall {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px; }
+  .center-showall .classic-showall {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 160px;
+    background: #3A3A45; }
+    .center-showall .classic-showall #classic-showall {
+      font-family: "Muli", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400; }
+
+.footer-main-wrapper {
+  width: 100%;
+  background: #F4F4F4; }
+  .footer-main-wrapper .top-footer-container {
+    display: flex;
+    justify-content: center;
+    height: 65px; }
+    .footer-main-wrapper .top-footer-container .top-footer-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 50px;
+      text-transform: uppercase;
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      color: #4F4F4F; }
+  .footer-main-wrapper .footer-news-container {
+    width: 100%;
+    height: 380px;
+    background: #3A3A45; }
+    .footer-main-wrapper .footer-news-container .footer-get-news-container {
+      display: flex;
+      justify-content: center; }
+      .footer-main-wrapper .footer-news-container .footer-get-news-container .footer-get-news {
+        font-family: "Taviraj", serif;
+        font-size: 36px;
+        line-height: 50px;
+        font-style: italic;
+        color: #FFF;
+        margin-top: 65px; }
+  .footer-main-wrapper .footer-social-media {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center; }
+    .footer-main-wrapper .footer-social-media .social-media-style {
+      color: #FFF;
+      font-size: 2em;
+      margin-left: 23px; }
+  .footer-main-wrapper .or-style {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: "Taviraj", serif;
+    font-size: 16px;
+    color: #FFF; }
+    .footer-main-wrapper .or-style #left-line {
+      display: flex;
+      justify-content: center;
+      height: 1px;
+      width: 64px;
+      background: #FFF;
+      margin-right: 15px;
+      margin-top: 7px; }
+    .footer-main-wrapper .or-style #right-line {
+      display: flex;
+      justify-content: center;
+      height: 1px;
+      width: 64px;
+      background: #FFF;
+      margin-left: 15px;
+      margin-top: 8px; }
+  .footer-main-wrapper .email-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px; }
+  .footer-main-wrapper .email-input {
+    width: 400px;
+    height: 50px;
+    border: #FFF solid 1px;
+    background: #FFF; }
+  .footer-main-wrapper input::-moz-placeholder {
+    font-family: "Muli", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding-left: 15px; }
+  .footer-main-wrapper input::-webkit-input-placeholder {
+    font-family: "Muli", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding-left: 15px; }
+  .footer-main-wrapper input:-ms-input-placeholder {
+    font-family: "Muli", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding-left: 15px; }
+  .footer-main-wrapper .email-button {
+    border: #fff solid 1px;
+    width: 140px;
+    height: 52px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: "Muli", sans-serif;
+    font-size: 16px; }
+  .footer-main-wrapper .shipping-payment-info {
+    width: 100%;
+    height: 318px;
+    background: url("../../../assets/img/footer/footer-background.jpg") center no-repeat;
+    display: flex;
+    justify-content: space-around; }
+    .footer-main-wrapper .shipping-payment-info .country-selection {
+      text-align: center;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: "Muli", sans-serif;
+      width: 358px;
+      height: 67px;
+      margin-top: 95px; }
+    .footer-main-wrapper .shipping-payment-info .shipping-partners {
+      text-align: center;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: "Muli", sans-serif;
+      width: 358px;
+      height: 67px;
+      margin-top: 95px; }
+      .footer-main-wrapper .shipping-payment-info .shipping-partners img {
+        margin-top: 25px;
+        width: 300px;
+        height: 75px; }
+    .footer-main-wrapper .shipping-payment-info .payment-partners {
+      text-align: center;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: "Muli", sans-serif;
+      width: 358px;
+      height: 67px;
+      margin-top: 95px; }
+      .footer-main-wrapper .shipping-payment-info .payment-partners img {
+        margin-top: 25px;
+        width: 300px;
+        height: 75px; }
+  .footer-main-wrapper .bottom-footer-wrapper {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    justify-content: center; }
+    .footer-main-wrapper .bottom-footer-wrapper .bottom-footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .footer-main-wrapper .bottom-footer-wrapper .bottom-footer-container .dw-footer-logo {
+        width: 156px;
+        height: 63px; }
+  .footer-main-wrapper .top-bottom-policy-lines {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: #000 solid 1px;
+    border-top: #000 solid 1px;
+    text-align: center; }
+  .footer-main-wrapper .bottom-footer-terms-policy {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: "Taviraj", serif;
+    margin: 15px 0px; }
 
 .nav-top-logo {
   width: 100%;
   background: #FFFFFF;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  font-family: "Taviraj", serif;
-  font-size: 18px;
-  font-weight: 150;
   margin-top: 20px;
   margin-bottom: 35px; }
+  .nav-top-logo img {
+    width: 154px;
+    height: 62px; }
   .nav-top-logo .logo-style {
     font-weight: 300;
     font-size: 50px; }
@@ -138,84 +441,3 @@
   font-size: 13px;
   color: #333333;
   letter-spacing: 1.5px; }
-
-.classic-watch-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
-
-.classic-watch-container {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 60px; }
-  .classic-watch-container .top-watch-style {
-    margin-bottom: 30px;
-    font-family: "Muli", sans-serif;
-    font-size: 16px;
-    color: #747474;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500; }
-  .classic-watch-container .watch-size {
-    height: 306px;
-    width: 306px; }
-  .classic-watch-container .bottom-watch-style {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 100%;
-    font-family: "Muli", sans-serif;
-    font-color: #747474;
-    font-size: 13.5px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    font-weight: 400; }
-  .classic-watch-container .watch-price-style {
-    color: #747474;
-    font-weight: 400; }
-
-.center-color-wrapper {
-  width: 100%; }
-  .center-color-wrapper .center-color-selector {
-    display: flex;
-    width: 75px; }
-    .center-color-wrapper .center-color-selector .gold-color-selection {
-      background-color: #D8CBA1;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      cursor: pointer;
-      text-align: center; }
-    .center-color-wrapper .center-color-selector .silver-color-selection {
-      background-color: #D0D0D0;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      cursor: pointer; }
-
-.center-showall {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 45px; }
-  .center-showall .classic-showall {
-    display: flex;
-    justify-content: center;
-    height: 45px;
-    width: 160px;
-    background: #3A3A45; }
-    .center-showall .classic-showall #classic-showall {
-      font-family: "Muli", sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: #FFF;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 400; }

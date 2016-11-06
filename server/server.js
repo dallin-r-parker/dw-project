@@ -25,7 +25,9 @@ app.post('/api/product', dbCtrl.addProduct);
 
 // ========  get methods
 app.get('/api/products', dbCtrl.getProducts);
-app.get('/api/classic', dbCtrl.getClassic)
+app.get('/api/classic', dbCtrl.getClassic);
+app.get('/api/blkclassic', dbCtrl.getBlkClassic);
+app.get('/api/dapclassic', dbCtrl.getDapClassic);
 // ======  update methods
 
 
