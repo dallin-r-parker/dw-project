@@ -95,29 +95,6 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
     $scope.getClassic = function () {
         mainService.getClassic().then(function (response) {
@@ -136,6 +113,29 @@ angular.module('dw-store').directive('classicWatchDir', function () {
         scope: {
             classics: '='
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
