@@ -1,19 +1,14 @@
 'use strict';
 
-angular.module('dw-store', []);
-// .config(function($stateProvider, $urlRouterProvider) {
-//
-//     $urlRouterProvider.otherwise('/');
-//     $stateProvider
-//         .state('home', {
-//             templateUrl: '../views/homeView.html',
-//             controller: 'homeCtrl',
-//             url: 'home'
-//         })
+angular.module('dw-store', ['ui.router']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
+    $urlRouterProvider.otherwise('/');
 
-//Insert third-party dependencies into empty array brackets
-//example: ng-grid, ui.router, etc...
+    $stateProvider.state('home', {
+        templateUrl: '../views/homeView.html',
+        url: '/'
+    });
+}]);
 "use strict";
 'use strict';
 
@@ -95,7 +90,18 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
+
     $scope.getClassic = function () {
         mainService.getClassic().then(function (response) {
             $scope.classics = response.data;
@@ -126,16 +132,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
         controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -177,11 +173,19 @@ angular.module('dw-store').directive('dapWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('footerCtrl', ["$scope", function ($scope) {
+
+    $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
+    $scope.myCountry = $scope.countries[0];
+}]);
+'use strict';
+
 angular.module('dw-store').directive('footerDir', function () {
 
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/footer/footer-tmpl.html'
+        templateUrl: 'app/directives/footer/footer-tmpl.html',
+        controller: 'footerCtrl'
     };
 });
 //restrict with A,E, or AE
