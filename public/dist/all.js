@@ -1,12 +1,15 @@
 'use strict';
 
-angular.module('dw-store', ['ui.router']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+angular.module('dw-store', ['ui.router', 'ui.bootstrap']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('home', {
-        templateUrl: '../views/homeView.html',
+        templateUrl: '../views/home/homeView.html',
         url: '/'
+    }).state('details', {
+        templateUrl: '../views/details/watchDetailsView.html',
+        url: '/details'
     });
 }]);
 "use strict";
@@ -100,6 +103,19 @@ angular.module('dw-store').directive('bottomDescriptionDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getClassic = function () {
@@ -119,19 +135,6 @@ angular.module('dw-store').directive('classicWatchDir', function () {
         scope: {
             classics: '='
         }
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
     };
 });
 //restrict with A,E, or AE
