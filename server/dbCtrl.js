@@ -1,6 +1,7 @@
 var app = require('./server.js') //<-- this is express
 var db = app.get('db');
 
+//noinspection JSUnusedLocalSymbols,JSUnusedLocalSymbols,JSUnusedLocalSymbols,JSUnusedLocalSymbols,JSUnusedLocalSymbols
 module.exports = {
 
     addProduct: function (req, res, next) {
@@ -16,6 +17,14 @@ module.exports = {
         console.log(error, products);
         res.send(products);
          })
+
+    },
+
+    getProductById: function (req, res, next) {
+        db.dw_store.findOne({id_primary_key: req.params.id}, function (error, products) {
+            console.log(error, products);
+            res.send(products);
+        })
 
     },
 

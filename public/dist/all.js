@@ -9,7 +9,18 @@ angular.module('dw-store', ['ui.router', 'ui.bootstrap']).config(["$stateProvide
         url: '/'
     }).state('details', {
         templateUrl: '../views/details/watchDetailsView.html',
-        url: '/details'
+        url: '/details/:id',
+        controller: 'detailsCtrl'
+    });
+}]);
+'use strict';
+
+angular.module('dw-store').controller('detailsCtrl', ["$scope", "mainService", "$stateParams", function ($scope, mainService, $stateParams) {
+
+    console.log($stateParams);
+
+    mainService.getWatchById($stateParams.id).then(function (response) {
+        $scope.watch = response.data;
     });
 }]);
 "use strict";
@@ -23,6 +34,31 @@ angular.module('dw-store').controller('mainCtrl', ["$scope", "mainService", func
         });
     };
     $scope.getProducts();
+
+    $(window).scroll(function () {
+        var winScroll = $(this).scrollTop();
+
+        console.log(winScroll);
+        if (winScroll > 113) {
+            $('.ship-promo').css({
+                "position": "fixed",
+                "top": "0",
+                "left": "0"
+            });
+        }if (winScroll < 113) {
+            $('.ship-promo').css({
+                "position": "realative",
+                "top": "151px ",
+                "left": "0px"
+            });
+        }
+        // if($(this).scrollTop() < 113) {
+        //     $('ship-promo').css('position: fixed');
+        // }
+    });
+
+    // console.log(winScroll);
+
 }]);
 'use strict';
 
@@ -33,6 +69,13 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
     this.getProducts = function () {
         return $http({
             url: '/api/products',
+            method: 'GET'
+        });
+    };
+
+    this.getWatchById = function (id) {
+        return $http({
+            url: '/api/products/' + id,
             method: 'GET'
         });
     };
@@ -79,6 +122,8 @@ angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainSer
         });
     };
     $scope.getBlkClassic();
+
+    $scope.showMeBlk = 3;
 }]);
 'use strict';
 
@@ -124,6 +169,8 @@ angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainServic
         });
     };
     $scope.getClassic();
+
+    $scope.showNum = 3;
 }]);
 'use strict';
 
@@ -162,6 +209,8 @@ angular.module('dw-store').controller('dapWatchCtrl', ["$scope", "mainService", 
         });
     };
     $scope.getDapClassic();
+
+    $scope.showMeDap = 3;
 }]);
 'use strict';
 
