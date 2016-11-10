@@ -16,89 +16,6 @@
     text-align: center;
     line-height: 34px; }
 
-.classic-watch-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
-
-.classic-watch-container {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 60px; }
-  .classic-watch-container .top-watch-style {
-    margin-bottom: 30px;
-    font-family: "Muli", sans-serif;
-    font-size: 16px;
-    color: #747474;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500; }
-  .classic-watch-container .watch-size {
-    height: 306px;
-    width: 306px; }
-  .classic-watch-container .bottom-watch-style {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 100%;
-    font-family: "Muli", sans-serif;
-    font-color: #747474;
-    font-size: 13.5px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    font-weight: 400; }
-  .classic-watch-container .watch-price-style {
-    color: #747474;
-    font-weight: 400; }
-
-.center-color-wrapper {
-  width: 100%; }
-  .center-color-wrapper .center-color-selector {
-    display: flex;
-    justify-content: center; }
-    .center-color-wrapper .center-color-selector .gold-color-selection {
-      background-color: #D8CBA1;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      cursor: pointer;
-      text-align: center; }
-    .center-color-wrapper .center-color-selector .silver-color-selection {
-      margin-left: 10px;
-      background-color: #D0D0D0;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      cursor: pointer; }
-
-.center-showall {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 45px; }
-  .center-showall .classic-showall {
-    display: flex;
-    justify-content: center;
-    height: 45px;
-    width: 160px;
-    background: #3A3A45; }
-    .center-showall .classic-showall #classic-showall {
-      font-family: "Muli", sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: #FFF;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 400; }
-
 .classic-full-wrapper {
   width: 97%;
   max-width: 1414px;
@@ -157,10 +74,12 @@
 .classic-hero-more {
   font-family: "Muli", sans-serif;
   font-size: 16px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
 
 #up-arrow-style {
-  font-size: 2em; }
+  font-size: 2em;
+  cursor: pointer; }
 
 .readmore-wrapper {
   background: #f4f4f4;
@@ -201,6 +120,91 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #4F4F4F; }
+
+.classic-watch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.classic-watch-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 60px; }
+  .classic-watch-container .top-watch-style {
+    margin-bottom: 30px;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    color: #747474;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .classic-watch-container .watch-size {
+    height: 306px;
+    width: 306px;
+    cursor: pointer; }
+  .classic-watch-container .bottom-watch-style {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: "Muli", sans-serif;
+    font-color: #747474;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 400; }
+  .classic-watch-container .watch-price-style {
+    color: #747474;
+    font-weight: 400; }
+
+.center-color-wrapper {
+  width: 100%; }
+  .center-color-wrapper .center-color-selector {
+    display: flex;
+    justify-content: center; }
+    .center-color-wrapper .center-color-selector .gold-color-selection {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .silver-color-selection {
+      margin-left: 10px;
+      background-color: #D0D0D0;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer; }
+
+.center-showall {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px; }
+  .center-showall .classic-showall {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 160px;
+    background: #3A3A45; }
+    .center-showall .classic-showall #classic-showall {
+      font-family: "Muli", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400;
+      cursor: pointer; }
 
 .footer-main-wrapper {
   width: 100%; }
@@ -361,6 +365,8 @@
       .footer-main-wrapper .bottom-footer-wrapper .bottom-footer-container img {
         width: 156px;
         height: 63px; }
+      .footer-main-wrapper .bottom-footer-wrapper .bottom-footer-container .dw-footer-logo {
+        cursor: pointer; }
   .footer-main-wrapper .top-bottom-policy-lines {
     display: flex;
     justify-content: space-around;
@@ -446,6 +452,8 @@
     justify-content: center;
     padding: 20px;
     font-size: 1.3em; }
+  .nav-bar-container .threedots {
+    background: #F4F4F4; }
   .nav-bar-container .dot-centering {
     font-size: 7px;
     padding-top: 21px;
@@ -463,3 +471,299 @@
   font-size: 13px;
   color: #333333;
   letter-spacing: 1.5px; }
+
+.main-detail-wrapper {
+  width: 100%; }
+  .main-detail-wrapper .watch-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4f4f4f; }
+    .main-detail-wrapper .watch-title #watch-size {
+      margin-top: 30px;
+      font-family: "Muli", sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 3px; }
+    .main-detail-wrapper .watch-title #selected-watch {
+      font-family: "Muli", sans-serif;
+      font-size: 50px;
+      font-weight: lighter;
+      letter-spacing: 5px;
+      margin-top: 14px; }
+  .main-detail-wrapper .carousel-container {
+    border: lightgray solid .7px;
+    height: 430px; }
+  .main-detail-wrapper .watch-attribute-wrapper {
+    width: 100%;
+    height: 82px; }
+    .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container {
+      display: flex; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-size {
+        width: 157px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: #FFF;
+        color: #4F4F4F;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif;
+        background: #F4F4F4;
+        font-size: 15px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color {
+        width: 157px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: #FFF;
+        color: #4F4F4F;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color:hover {
+        color: red; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-silver-color {
+        width: 157px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: #FFF;
+        color: #4F4F4F;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif;
+        text-transform: uppercase;
+        border: #4F4F4F solid .7px;
+        font-size: 14px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-shopnow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 56px;
+        width: 320px;
+        margin-left: 30%;
+        background: #479E7A;
+        text-align: center;
+        font-family: "Muli", sans-serif;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        word-spacing: 3px;
+        font-weight: bold; }
+  .main-detail-wrapper .watch-details-container {
+    width: 100%; }
+  .main-detail-wrapper .watch-description {
+    width: 80%;
+    margin: 62px auto 0px;
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    line-height: 34px;
+    text-indent: 30px; }
+  .main-detail-wrapper .details-for-watch {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .main-detail-wrapper .details-for-watch .details-container {
+      display: flex;
+      flex-wrap: wrap;
+      background: #F4F4F4;
+      width: 80%;
+      height: 280px;
+      margin: 60px auto 0px; }
+      .main-detail-wrapper .details-for-watch .details-container .details-title {
+        font-family: "Muli", sans-serif;
+        color: #525252;
+        text-transform: uppercase;
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: 3px;
+        padding: 50px 0px 35px 0px; }
+      .main-detail-wrapper .details-for-watch .details-container .left-details {
+        display: flex;
+        width: 50%;
+        height: 59.6%;
+        background: red; }
+      .main-detail-wrapper .details-for-watch .details-container .right-details {
+        width: 50%;
+        height: 59.6%;
+        background: green; }
+  .main-detail-wrapper .inspiration-wrapper {
+    width: 100%;
+    text-align: center;
+    font-family: "Muli", sans-serif;
+    text-transform: uppercase; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-title {
+      font-size: 55px;
+      line-height: 65px;
+      color: #4f4f4f;
+      font-weight: lighter;
+      letter-spacing: 7px; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-subtitle {
+      font-size: 25px;
+      line-height: 29px;
+      color: #AAA;
+      letter-spacing: 8.5px;
+      word-spacing: 3.5px; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-bottom-line {
+      width: 92px;
+      height: 1px;
+      background: #4f4f4f;
+      margin: 18px auto; }
+
+.main-checkout-wrapper {
+  width: 100%; }
+  .main-checkout-wrapper .checkout-nav-container {
+    height: 125px;
+    display: flex;
+    justify-content: center; }
+    .main-checkout-wrapper .checkout-nav-container #checkout-logo-img {
+      padding-top: 20px;
+      width: 154px;
+      height: 62px; }
+  .main-checkout-wrapper .nav-continue-shopping {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 52px;
+    width: 100%;
+    background: #3F3F4A;
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px; }
+    .main-checkout-wrapper .nav-continue-shopping .continue-shopping {
+      margin-left: 200px; }
+    .main-checkout-wrapper .nav-continue-shopping #double-arrow-style {
+      font-size: 11.5px; }
+  .main-checkout-wrapper .sub-nav-bar {
+    display: flex;
+    justify-content: center;
+    height: 26px;
+    padding-top: 19px;
+    background: #F4F4F4;
+    font-family: "Muli", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px; }
+    .main-checkout-wrapper .sub-nav-bar #nav-left-line {
+      height: 1px;
+      width: 63px;
+      background: #DDDDDD;
+      margin-right: 20px;
+      margin-top: 6px; }
+    .main-checkout-wrapper .sub-nav-bar #nav-right-line {
+      height: 1px;
+      width: 63px;
+      background: #DDDDDD;
+      margin-left: 20px;
+      margin-top: 6px; }
+  .main-checkout-wrapper .checkout-title-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 60px 0px 30px; }
+    .main-checkout-wrapper .checkout-title-wrapper .checkout-title-container {
+      display: flex;
+      justify-content: center; }
+      .main-checkout-wrapper .checkout-title-wrapper .checkout-title-container .checkout-title {
+        font-family: "Muli", sans-serif;
+        font-size: 50px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: #4F4F4F; }
+  .main-checkout-wrapper .line-center {
+    display: flex;
+    justify-content: center; }
+    .main-checkout-wrapper .line-center #checkout-line {
+      width: 82px;
+      height: 1px;
+      background: #DDD; }
+  .main-checkout-wrapper .checkout-results-wrapper {
+    height: 132px;
+    width: 80%;
+    display: flex;
+    background: #F4F4F4;
+    margin-top: 52px;
+    margin: 0px auto; }
+    .main-checkout-wrapper .checkout-results-wrapper .checkout-results-img-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      margin: 0px 30px; }
+      .main-checkout-wrapper .checkout-results-wrapper .checkout-results-img-container img {
+        max-width: 100%;
+        max-height: 100%; }
+    .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-detail-results {
+        display: flex;
+        height: 66px;
+        width: 100%;
+        padding-top: 33px;
+        border-bottom: #DDD solid 1px; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-detail-results .checkout-watch-name {
+          font-family: "Muli", sans-serif;
+          font-size: 22px;
+          text-transform: uppercase;
+          color: #4F4F4F;
+          letter-spacing: 3px;
+          font-weight: lighter; }
+      .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details {
+        display: flex;
+        justify-content: space-between;
+        height: 66px;
+        width: 100%;
+        padding-top: 16.5px; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details .checkout-color {
+          font-family: "Muli", sans-serif;
+          font-size: 16px;
+          color: #787878;
+          text-transform: uppercase;
+          font-weight: 400; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details .checkout-size {
+          font-family: "Muli", sans-serif;
+          font-size: 16px;
+          color: #787878;
+          text-transform: uppercase;
+          font-weight: 400; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details .checkout-qty {
+          font-family: "Muli", sans-serif;
+          font-size: 16px;
+          color: #787878;
+          text-transform: uppercase;
+          font-weight: 400; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details .checkout-total {
+          font-family: "Muli", sans-serif;
+          font-size: 16px;
+          color: #787878;
+          text-transform: uppercase;
+          font-weight: 400; }
+  .main-checkout-wrapper .checkout-addmore-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    width: 245px;
+    margin: 50px auto 0px;
+    background: #3A3A45; }
+    .main-checkout-wrapper .checkout-addmore-wrapper .checkout-addmore-container {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-family: "Muli", sans-serif; }
+      .main-checkout-wrapper .checkout-addmore-wrapper .checkout-addmore-container #plus-sign-style {
+        font-size: 9px;
+        margin-right: 4px; }
+  .main-checkout-wrapper .checkout-middle-line {
+    border-top: #C8C8C8 solid 1px;
+    margin-top: 110px; }
