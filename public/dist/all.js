@@ -1,9 +1,8 @@
 'use strict';
 
-angular.module('dw-store', ['ui.router', 'ui.bootstrap']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+angular.module('dw-store', ['ui.router']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
-
+    // $urlRouterProvider.otherwise('/');
     $stateProvider.state('home', {
         templateUrl: '../views/home/homeView.html',
         url: '/'
@@ -11,16 +10,18 @@ angular.module('dw-store', ['ui.router', 'ui.bootstrap']).config(["$stateProvide
         templateUrl: '../views/details/watchDetailsView.html',
         url: '/details/:id',
         controller: 'detailsCtrl'
+    }).state('checkout', {
+        templateUrl: '../views/checkout/checkoutView.html',
+        url: '/checkout'
+        // controller: 'checkoutCtrl'
     });
 }]);
 'use strict';
 
-angular.module('dw-store').controller('detailsCtrl', ["$scope", "mainService", "$stateParams", function ($scope, mainService, $stateParams) {
-
-    console.log($stateParams);
+angular.module('dw-store').controller('detailsCtrl', ["$scope", "$state", "mainService", "$stateParams", function ($scope, $state, mainService, $stateParams) {
 
     mainService.getWatchById($stateParams.id).then(function (response) {
-        $scope.watch = response.data;
+        $scope.watch = response.data[0];
     });
 }]);
 "use strict";
@@ -34,30 +35,17 @@ angular.module('dw-store').controller('mainCtrl', ["$scope", "mainService", func
         });
     };
     $scope.getProducts();
+}]);
+'use strict';
 
-    $(window).scroll(function () {
-        var winScroll = $(this).scrollTop();
+angular.module('dw-store').service('checkoutService', ["$http", function ($http) {
 
-        console.log(winScroll);
-        if (winScroll > 113) {
-            $('.ship-promo').css({
-                "position": "fixed",
-                "top": "0",
-                "left": "0"
-            });
-        }if (winScroll < 113) {
-            $('.ship-promo').css({
-                "position": "realative",
-                "top": "151px ",
-                "left": "0px"
-            });
-        }
-        // if($(this).scrollTop() < 113) {
-        //     $('ship-promo').css('position: fixed');
-        // }
-    });
+    //add $q if needed
 
-    // console.log(winScroll);
+    // $http({
+    //   method: 'GET',
+    //   url: 'schedule.json'
+    // })
 
 }]);
 'use strict';
@@ -114,6 +102,19 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -143,19 +144,6 @@ angular.module('dw-store').directive('bottomDescriptionDir', function () {
     return {
         restrict: 'E',
         templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -246,7 +234,30 @@ angular.module('dw-store').directive('footerDir', function () {
 angular.module('dw-store').directive('navDir', function () {
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/nav/nav-tmpl.html'
+        templateUrl: 'app/directives/nav/nav-tmpl.html',
+        link: function link(scope, element, attribute) {
+            // $(window).scroll(function () {
+            //     var winScroll = $(this).scrollTop();
+            //
+            //     console.log(winScroll);
+            //     if(winScroll > 113){
+            //         $('.ship-promo').css({
+            //             "position": "fixed",
+            //             "top":"0",
+            //             "left": "0"
+            //         })
+            //     } if(winScroll < 113){
+            //         $('.ship-promo').css({
+            //             "position": "relative",
+            //             "top": "151px ",
+            //             "left": "0px"
+            //         })
+            //     }
+            //     if($(this).scrollTop() < 113) {
+            //         $('ship-promo').css('position: fixed');
+            //     }
+            // })
+        }
     };
 });
 //restrict with A,E, or AE

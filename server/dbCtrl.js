@@ -21,11 +21,10 @@ module.exports = {
     },
 
     getProductById: function (req, res, next) {
-        db.dw_store.findOne({id_primary_key: req.params.id}, function (error, products) {
+        db.get_product_by_id([req.params.id], function (error, products) {
             console.log(error, products);
             res.send(products);
         })
-
     },
 
     getClassic: function (req, res, next) {
