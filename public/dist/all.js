@@ -142,16 +142,6 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -171,6 +161,16 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/blkClassicWatch/blk-classic-watch-tmpl.html',
         controller: 'blkClassicWatchCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
