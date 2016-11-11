@@ -34,15 +34,19 @@ angular.module('dw-store').controller('detailsCtrl', ["$scope", "$state", "mainS
         checkoutService.addToCart(watch);
     };
 
-    $('.attribute-silver-color').click(function () {
-        $('.attribute-gold-color').css({ "color": "#afafaf", "border": "#afafaf solid .7px" });
-        $(this).css({ "color": "#4f4f4f", "border": "#4f4f4f solid .7px" });
-    });
+    // $('.attribute-silver-color').one( "click", function () {
+    //     $('.attribute-gold-color').css({"color": "#afafaf", "border": "#afafaf solid .7px"})
+    //     $(this).css({"color": "#4f4f4f", "border": "#4f4f4f solid .7px"})
+    // })
+    //
+    //  $('.attribute-gold-color').one( "click", function () {
+    //      $('.attribute-silver-color').css({"color": "#afafaf", "border": "#afafaf solid .7px"})
+    //      $(this).css({"color": "#4f4f4f", "border": "#4f4f4f solid .7px"})
+    //  })
 
-    $('.attribute-gold-color').click(function () {
-        $('.attribute-silver-color').css({ "color": "#afafaf", "border": "#afafaf solid .7px" });
-        $(this).css({ "color": "#4f4f4f", "border": "#4f4f4f solid .7px" });
-    });
+    // $('.attribute-silver-color').hover(function () {
+    //     if()
+    // })
 
     // $('.attribute-gold-color').hover(function () {
     //     if(color === #4f4f4fx)
@@ -138,6 +142,16 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -170,16 +184,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
         controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -258,23 +262,25 @@ angular.module('dw-store').directive('detailsCarouselDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/detailsCarousel/detailsCarousel.html',
         link: function link(scope, element, attribute) {
+            // $('.variable-width').slick({
+            //     infinite: false,
+            //     dots: false,
+            //     autoplay: true,
+            //     speed: 300,
+            //     slidesToShow: 3,
+            //     centerMode: true,
+            //     variableWidth: false
+            // });
 
-            $('.center').slick({
-                centerMode: true,
-                arrows: true,
-                centerPadding: '15px',
+
+            $('.autoplay').slick({
                 slidesToShow: 3,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2500,
-                pauseOnFocus: true,
-                // useTransform: true,
-                focusOnSelect: true,
-                // slidesToScroll:3,
-                accessibility: true
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                arrows: true,
+                infinite: false
             });
-
-            $('.item').mouseenter(function () {});
         }
     };
 });
