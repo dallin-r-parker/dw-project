@@ -1,0 +1,25 @@
+<section class="classic-watch-wrapper">
+    <section class="classic-watch-container">
+
+        <aside class="row1" ng-repeat="classic in classics" ng-show="$index < showNum">
+                <h1 class="top-watch-style">{{classic.category}} | {{classic.size}}</h1>
+                <img ng-src="{{classic.gold_img}}" ng-hide="showme" ui-sref="details({id: {{classic.id_primary_key}}})" alt="{{classic.category}} {{classic.name}} Watch {{classic.size}}" class="watch-size">
+            <img ng-src="{{classic.silver_img}}" ng-show="showme" ui-sref="details({id: {{classic.id_primary_key}}})" alt="{{classic.category}} {{classic.name}} Watch {{classic.size}}" class="watch-size">
+            <p class="bottom-watch-style">{{classic.name}} <span class="watch-price-style"> ${{classic.price}}</span></p>
+        <section class="center-color-wrapper">
+            <section class="center-color-selector">
+                <div class="gold-color-selection" ng-click="showme = false"> <!--Gold Color Selection --></div>
+                <div class="silver-color-selection" ng-click="showme = true"><!--Silver Color Selection --></div>
+            </section>
+        </section>
+        </aside>
+
+    </section>
+</section>
+
+<aside class="center-showall" ng-hide="showNum > 3" ng-click="showNum = 12">
+    <section class="classic-showall">
+        <span id="classic-showall">Show All (12)</span>
+    </section>
+</aside>
+

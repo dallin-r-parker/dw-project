@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dw-store', ['ui.router', 'slick']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+angular.module('dw-store', ['ui.router', 'slick', 'sticky']).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
     // $urlRouterProvider.otherwise('/');
     $stateProvider.state('home', {
@@ -131,17 +131,6 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
 }]);
 'use strict';
 
-angular.module('dw-store').directive('blkClassicHeroDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
-
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -161,6 +150,17 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/blkClassicWatch/blk-classic-watch-tmpl.html',
         controller: 'blkClassicWatchCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('blkClassicHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
+
     };
 });
 //restrict with A,E, or AE
@@ -253,6 +253,45 @@ angular.module('dw-store').directive('dapWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('footerCtrl', ["$scope", function ($scope) {
+
+    $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
+    $scope.myCountry = $scope.countries[0];
+}]);
+'use strict';
+
+angular.module('dw-store').directive('footerDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/footer/footer-tmpl.html',
+        controller: 'footerCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('navDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/nav/nav-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+
+    $scope.message = 1;
+    // $scope.ItemsInCart = function () {
+    //     for(item in checkoutItems){
+    //         if( )
+    //     }
+    // }
+
+}]);
+'use strict';
+
 angular.module('dw-store').controller('detailsCarouselCtrl', ["$scope", function ($scope) {}]);
 'use strict';
 
@@ -287,54 +326,15 @@ angular.module('dw-store').directive('detailsCarouselDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').controller('footerCtrl', ["$scope", function ($scope) {
-
-    $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
-    $scope.myCountry = $scope.countries[0];
-}]);
+angular.module('dw-store').controller('searchModalCtrl', ["$scope", function ($scope) {}]);
 'use strict';
 
-angular.module('dw-store').directive('footerDir', function () {
+angular.module('dw-store').directive('searchModalDir', function () {
 
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/footer/footer-tmpl.html',
-        controller: 'footerCtrl'
+        templateUrl: 'app/directives/searchModal/search-modal-tmpl.html',
+        controller: 'searchModalCtrl'
     };
 });
 //restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('navDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/nav/nav-tmpl.html',
-        link: function link(scope, element, attribute) {
-            // $(window).scroll(function () {
-            //     var winScroll = $(this).scrollTop();
-            //
-            //     console.log(winScroll);
-            //     if(winScroll > 113){
-            //         $('.ship-promo').css({
-            //             "position": "fixed",
-            //             "top":"0",
-            //             "left": "0"
-            //         })
-            //     } if(winScroll < 113){
-            //         $('.ship-promo').css({
-            //             "position": "relative",
-            //             "top": "151px ",
-            //             "left": "0px"
-            //         })
-            //     }
-            //     if($(this).scrollTop() < 113) {
-            //         $('ship-promo').css('position: fixed');
-            //     }
-            // })
-        }
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('navDirCtrl', ["$scope", function ($scope) {}]);

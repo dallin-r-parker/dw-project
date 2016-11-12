@@ -1,0 +1,67 @@
+<section class="main-checkout-wrapper">
+    <nav class="checkout-nav-container">
+        <img src="../../assets/img/icons/logo/dw_logo_black.png" alt="Daniel Wellington Logo" id="checkout-logo-img" ui-sref="home">
+    </nav>
+
+    <nav class="nav-continue-shopping">
+        <p class="continue-shopping"><i class="fa fa-angle-double-left" aria-hidden="true" id="double-arrow-style"></i> continue shopping</p>
+    </nav>
+
+    <nav class="sub-nav-bar">
+<div id="nav-left-line"></div><p>free shipping worldwide when purchasing a watch</p><div id="nav-right-line"></div>
+    </nav>
+
+    <section class="checkout-title-wrapper">
+        <aside class="checkout-title-container">
+            <p class="checkout-title">checkout</p>
+        </aside>
+        <br>
+
+        <aside class="line-center">
+            <span id="checkout-line"><!--Line under checkout --></span>
+        </aside>
+    </section>
+
+    <section class="checkout-results-wrapper">
+        <section class="checkout-results-img-container">
+            <img src="../../assets/img/classic-collection/bristol/carousel/gold/bristol1g.png" alt="Horizontal Classic Bristol Watch">
+        </section>
+
+        <section class="checkout-detail-wrapper">
+        <section class="checkout-detail-results" ng-repeat="items in cart">
+            <p class="checkout-watch-name">{{items.category}} {{items.name}} {{items.size}}</p>
+        </section>
+
+
+
+        <section class="checkout-watch-details" ng-repeat="items in cart">
+            <p class="checkout-color">rose gold</p>
+            <p class="checkout-size">{{items.size}}</p>
+            <div id="checkout-subtract"></div><p class="checkout-qty">1</p><div id="checkout-add"></div>
+            <p class="checkout-total">${{items.price}}</p>
+        </section>
+        </section>
+    </section>
+
+    <section class="checkout-addmore-wrapper">
+        <section class="checkout-addmore-container">
+            <i class="fa fa-plus" aria-hidden="true" id="plus-sign-style"></i><p>add extra watch band</p>
+        </section>
+    </section>
+    <section class="checkout-middle-line"></section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<nav-dir></nav-dir>
+
+<section class="main-detail-wrapper">
+    <section class="watch-title">
+        <h1 id="watch-size">{{watch.category}} | {{watch.size}}</h1>
+        <p id="selected-watch">{{watch.name}}</p>
+    </section>
+
+    <section class="details-carousel-container">
+        <details-carousel-dir></details-carousel-dir>
+    </section>
+
+    <section class="watch-attribute-wrapper">
+    <section class="watch-attribute-container">
+        <aside class="attribute-size">{{watch.size}}</aside>
+        <aside class="attribute-gold-color" ng-click="showSilver = false"><div id="gold-circle"></div> <br> <p id="gold-style">rose gold</p></aside>
+        <aside class="attribute-silver-color" ng-click="showSilver = true"><div id="silver-circle"></div> <br> <p id="silver-style">silver</p></aside>
+        <aside class="attribute-shopnow" ui-sref="checkout" ng-click="addToCart(watch)">${{watch.price}}  |  shop now</aside>
+    </section>
+    </section>
+
+    <section class="watch-details-container">
+        <p class="watch-description">{{watch.above_details}}</p>
+    </section>
+
+    <aside class="details-for-watch">
+        <section class="details-container">
+            <p class="details-title">the details</p>
+
+            <section class="left-details">
+                <li></li>
+            </section>
+            <section class="right-details">
+
+            </section>
+        </section>
+    </aside>
+
+    <section class="inspiration-wrapper">
+        <p class="inspiration-title">inspiration</p>
+        <p class="inspiration-subtitle">{{watch.category}} {{watch.name}} on instagram</p>
+        <p class="inspiration-bottom-line"></p>
+    </section>
+
+</section>
+<footer-dir></footer-dir>

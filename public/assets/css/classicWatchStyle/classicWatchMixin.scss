@@ -1,0 +1,50 @@
+@mixin top-watch-style {
+  margin-bottom:30px;
+  font-family:$primary-font;
+  font-size: 16px;
+  color: $top-watch-font-color;
+  text-transform: uppercase;
+  letter-spacing:2px;
+  font-weight: 500;
+}
+@mixin bottom-watch-style {
+  margin-top:30px;
+  margin-bottom:25px;
+  width: 100%;
+  font-family:$primary-font;
+  font-color:$bottom-watch-font-color;
+  font-size:$bottom-font-size;
+  text-transform: uppercase;
+  letter-spacing:1.8px;
+  font-weight:400;
+}
+
+@mixin watch-price-style {
+  color:$top-watch-font-color;
+  font-weight:400;
+}
+
+@mixin gold-color-selection{
+  background-color:$gold-color;
+  margin-bottom: 100px;
+  width:22px;
+  height:22px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+@mixin silver-color-selection {
+  margin-left:10px;
+  background-color:$silver-color;
+  margin-bottom: 100px;
+  width:22px;
+  height:22px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  cursor: pointer;
+}
+

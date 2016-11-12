@@ -1,0 +1,98 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Muli|Taviraj');
+
+.nav-top-logo {
+  width:100%;
+  background: #FFFFFF;
+  display: flex;
+  justify-content:center;
+  margin-top:20px;
+  margin-bottom:35px;
+  cursor: pointer;
+  img {
+    width:154px;
+    height:62px;
+  }
+
+    .logo-style {
+      font-weight:300;
+      font-size: 50px;
+    }
+}
+
+.nav-bar-container {
+  width:100%;
+  height: $nav-height;
+  background: $nav-bgcolor;
+  display: flex;
+  justify-content:center;
+  color: $nav-font-color;
+  font-family:$primary-font;
+  font-size: $nav-font-size;
+  text-transform: uppercase;
+
+      #nav-collection {@include vertical-centering}
+      //#nav-collection:hover {@include underline-hvr}
+      #nav-accessories {@include vertical-centering}
+      #nav-men {@include vertical-centering}
+      #nav-women {@include vertical-centering}
+      #nav-watch-bands {@include vertical-centering}
+      .nav-search-icon {
+        @include vertical-centering;
+        font-size:$nav-icon-size;
+        padding-left:20px;
+      }
+      .nav-cart {
+        @include vertical-centering;
+        font-size:$nav-icon-size;
+      }
+      .dot-centering {
+        font-size: 7px;
+        padding-top:21px;
+        letter-spacing: 1.5px;
+        width:35px;
+        cursor: pointer;
+      }
+
+
+}
+
+.ship-promo {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  width:100%;
+  height:$promo-height;
+  background-color: #F4F4F4;
+  text-transform: uppercase;
+  text-align: center;
+  font-size:13px;
+  color: $promo-font-color;
+  letter-spacing: 1.5px;
+        //FIXME: lines aren't working
+     //.promo-lines{@include left}
+}
+
+.nav-sub-menu-wrapper{
+  height:52px;
+  width:100%;
+  background: $footer-off-white;
+    .nav-sub-menu-container{
+      display: flex;
+      justify-content:center;
+
+      .nav-drop-text{ @include vertical-centering
+        text-transform: uppercase;
+        text-align: center;
+        font-size:$nav-font-size;
+        color: $promo-font-color;
+        letter-spacing: 1.5px;
+      }
+    }
+}
+
+
+
+
+
+

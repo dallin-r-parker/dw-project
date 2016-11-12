@@ -1,0 +1,31 @@
+//============ Navigation Mixin =========================
+@mixin vertical-centering {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  padding: 20px;
+}
+
+//@mixin underline-hvr p{
+//  border-bottom: #FFF solid 1px;
+//  margin-top:-10px;
+//}
+
+
+//FIXME: not working
+//@mixin line-style {
+//  width: 25px;
+//  height:5px;
+//  background: red;
+//  text-align: center;
+//}
+
+//margin-top:16px;
+//margin-left:10px;
+//background-color:#D8CBA1;
+//width:22px;
+//height:22px;
+//-webkit-border-radius:50%;
+//                        -moz-border-radius:50%;
+//                                             border-radius:50%;
+//                                                             cursor: pointer;

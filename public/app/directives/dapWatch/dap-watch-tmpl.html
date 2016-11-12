@@ -1,0 +1,26 @@
+<section class="classic-watch-wrapper">
+    <section class="classic-watch-container">
+
+        <aside class="row1" ng-repeat="watch in dapclassics" ng-show="$index < showMeDap">
+            <h1 class="top-watch-style">{{watch.category}} | {{watch.size}}</h1>
+            <img ng-src="{{watch.gold_img}}" ng-hide="showme1" ui-sref="details({id: {{watch.id_primary_key}}})" alt="Dapper Sheffield Watch 38mm" class="watch-size">
+            <img ng-src="{{watch.silver_img}}" ng-show="showme1" ui-sref="details({id: {{watch.id_primary_key}}})" alt="Dapper Sheffield Watch 38mm" class="watch-size">
+            <p class="bottom-watch-style">{{watch.name}} <span class="watch-price-style"> ${{watch.price}}</span></p>
+            <section class="center-color-wrapper">
+                <section class="center-color-selector">
+                    <div class="gold-color-selection" ng-click="showme1 = false"> <!--Gold Color Selection --></div>
+                    <div class="silver-color-selection" ng-click="showme1 = true"><!--Silver Color Selection --></div>
+                </section>
+            </section>
+        </aside>
+
+    </section>
+</section>
+
+<aside class="center-showall" ng-hide="showMeDap > 3" ng-click="showMeDap = 6">
+    <section class="classic-showall">
+        <span id="classic-showall">Show All (6)</span>
+    </section>
+</aside>
+
+

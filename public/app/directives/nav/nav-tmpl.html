@@ -1,0 +1,46 @@
+<nav class="main-nav-wrapper">
+    <section class="nav-top-logo">
+        <img src="../../../assets/img/icons/logo/dw_logo_black.png" alt="Daniel Wellington Logo" ui-sref="home">
+    </section>
+
+    <section class="nav-bar-container">
+        <p id="nav-collection" class="hvr-underline-from-center">collections</p>
+        <p id="nav-accessories" class="hvr-underline-from-center">accessories</p>
+        <p id="nav-men" class="hvr-underline-from-center">men</p>
+        <p id="nav-women" class="hvr-underline-from-center">women</p>
+        <p id="nav-watch-bands" class="hvr-underline-from-center">watch bands</p>
+
+        <aside class="sub-nav-threedots" ng-click="showDropMenu = !showDropMenu">
+                <section class="dot-centering"><i class="fa fa-circle" aria-hidden="true"></i>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                </section>
+        </aside>
+
+        <aside class="nav-search-icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </aside>
+        <aside class="nav-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true">1</i>
+        </aside>
+
+    </section>
+</nav>
+
+<section class="nav-sub-menu-wrapper" ng-show="showDropMenu">
+    <section class="nav-sub-menu-container">
+        <li class="nav-drop-text">dw world</li>
+        <li class="nav-drop-text">journal</li>
+        <li class="nav-drop-text">stores</li>
+        <li class="nav-drop-text">our story</li>
+        <li class="nav-drop-text">help/support</li>
+    </section>
+</section>
+
+<section class="ship-promo" sticky ng-hide="showDropMenu">
+    <p class="promo-description"><div class="promo-lines"></div>free shipping worldwide when purchasing a watch<div class="promo-lines"></div></p>
+</section>
+
+
+
+

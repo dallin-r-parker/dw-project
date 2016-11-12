@@ -1,21 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400");
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 @import url("https://fonts.googleapis.com/css?family=Muli|Taviraj");
-.btm-description-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .btm-description-wrapper .btm-description-container {
-    width: 83%;
-    text-align: center;
-    margin-top: 53px;
-    margin-bottom: 80px; }
-  .btm-description-wrapper .btm-content {
-    font-family: "Taviraj", serif;
-    font-size: 24px;
-    text-align: center;
-    line-height: 34px; }
-
 .classic-full-wrapper {
   width: 97%;
   max-width: 1414px;
@@ -120,6 +105,21 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #4F4F4F; }
+
+.btm-description-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .btm-description-wrapper .btm-description-container {
+    width: 83%;
+    text-align: center;
+    margin-top: 53px;
+    margin-bottom: 80px; }
+  .btm-description-wrapper .btm-content {
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 34px; }
 
 .classic-watch-wrapper {
   width: 100%;
@@ -397,7 +397,8 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  cursor: pointer; }
   .nav-top-logo img {
     width: 154px;
     height: 62px; }
@@ -445,19 +446,20 @@
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    padding-left: 20px; }
   .nav-bar-container .nav-cart {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
     font-size: 1.3em; }
-  .nav-bar-container .threedots {
-    background: #F4F4F4; }
   .nav-bar-container .dot-centering {
     font-size: 7px;
     padding-top: 21px;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    width: 35px;
+    cursor: pointer; }
 
 .ship-promo {
   display: flex;
@@ -471,6 +473,24 @@
   font-size: 13px;
   color: #333333;
   letter-spacing: 1.5px; }
+
+.nav-sub-menu-wrapper {
+  height: 52px;
+  width: 100%;
+  background: #F4F4F4; }
+  .nav-sub-menu-wrapper .nav-sub-menu-container {
+    display: flex;
+    justify-content: center; }
+    .nav-sub-menu-wrapper .nav-sub-menu-container .nav-drop-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 15px;
+      color: #333333;
+      letter-spacing: 1.5px; }
 
 .main-checkout-wrapper {
   width: 100%; }

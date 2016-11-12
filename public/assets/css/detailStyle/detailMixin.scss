@@ -1,0 +1,106 @@
+@mixin detail-title-style {
+  font-family:$primary-font;
+  color: $subTitle-color;
+  text-transform: uppercase;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing:3px;
+  padding:50px 0px 35px 0px;
+}
+
+@mixin attribute-style{
+  width: 157px;
+  height: 54px;
+  background: #FFF;
+  margin-left:20px;
+  font-family:$primary-font;
+}
+
+@mixin attribute-specific-style{
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+  text-align: center;
+  background:#F4F4F4;
+  font-size: 15px;
+}
+
+@mixin attribute-gold-style{
+  display: flex;
+  text-align: center;
+  color: #4F4F4F;
+  text-transform: uppercase;
+  font-size:14px;
+  border: #4F4F4F solid .7px;
+}
+@mixin gold-circle {
+  margin-top:16px;
+  margin-left:10px;
+  background-color:#D8CBA1;
+  width:22px;
+  height:22px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  cursor: pointer;
+}
+
+@mixin silver-circle {
+  margin-top:16px;
+  margin-left:35px;
+  background-color:#d0d0d0;
+  width:22px;
+  height:22px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  cursor: pointer;
+}
+
+@mixin attribute-silver-style{
+  display: flex;
+  text-align: center;
+  color:#AFAFAF;
+  text-transform: uppercase;
+  font-size:14px;
+  border: #AFAFAF solid .7px;
+}
+
+@mixin attribute-shopnow{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  height:56px;
+  width:288px;
+  margin-left:16%;
+  background: #479E7A;
+  text-align: center;
+  font-family:$primary-font;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  word-spacing:3px;
+  font-weight:bold;
+
+}
+
+//This is the style for the cirlce
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lusitana');
+
+.classic-full-wrapper{
+  width:97%;
+  max-width:1414px;
+  margin:0 auto;
+}
+.classic-hero-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: 3vh;
+  text-align: center;
+
+    img {
+      width:100%;
+      position: absolute;
+      top:0;
+      left:50%;
+      transform:translate(-50%, 0%);
+      z-index: -1;
+    }
+}
+.classic-hero-container::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+
+.hero-img-content {
+  vertical-align: middle;
+  display: inline-block;
+  color: $hero-img-textcolor;
+}
+
+.classic-hero-text1 {
+  margin-bottom:10px;
+  margin-top:68px;
+  text-transform: uppercase;
+  font-family:$hero-classic-font;
+  font-size:68px;
+  font-weight:300;
+  letter-spacing:7px;
+}
+
+.classic-hero-40mm {
+  font-family: $hero-classic-font;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight:bolder;
+  letter-spacing:4px;
+  margin-bottom:35px;
+}
+
+.classic-hero-italic {
+  font-family:$hero-class-italic-font;
+  font-style: italic;
+  font-size:20px;
+  margin-bottom:55px;
+}
+
+.classic-hero-more {
+  font-family:$hero-classic-font;
+  font-size:16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#up-arrow-style {
+  font-size:$arrow-font-size;
+  cursor: pointer;
+}
+
+// ==== Styling for the readmore drop down
+
+.readmore-wrapper{
+  background: #f4f4f4;
+  width:100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .readmore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    #style-readmore-img {
+      margin-top: 72px;
+      margin-bottom: 56px;
+      text-align: center;
+
+      img {
+        width: 371px;
+        height: 403px;
+      }
+    }
+
+    .style-readmore-text {
+      text-align: center;
+
+      .classic-toggle-text {
+        margin-bottom: 48px;
+        font-family: $logo-font;
+        font-size: 18px;
+        line-height: 27px;
+        color: $toggle-font-color;
+
+      }
+
+      .close-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 45px;
+      }
+
+      #close-arrow-style {
+        font-size: $arrow-font-size;
+        color: $toggle-font-color;
+      }
+
+      .classic-hero-close {
+        font-family:$hero-classic-font;
+        font-size:16px;
+        text-transform: uppercase;
+        color: $toggle-font-color;
+
+      }
+
+
+    }
+  }
+
+}
