@@ -1,0 +1,80 @@
+<section class="main-forum-wrapper">
+    <section class="forum-title-centering">
+    <section class="forum-title1-container">
+     <p class="customer-info-title">your information</p>
+        <span class="title-line-left"></span>
+    </section>
+    <section class="forum-title2-container">
+        <p class="summary-title">summary</p>
+        <br>
+        <aside class="line-center">
+         <span id="summary-line"></span>
+        </aside>
+    </section>
+    </section>
+</section>
+
+<section class="forum-fillout-wrapper">
+    <aside class="customer-info-fillout-container">
+<!--input for email address-->
+        <section class="email-wrap">
+            <p class="email-title">email address</p>
+            <input id="email-info" type="email"
+                   ng-model="string"
+                   [name="string"]
+                   [required="string"]
+                   [ng-required="string"]
+                   [ng-minlength="number"]
+                   [ng-maxlength="number"]
+                   [pattern="string"]
+                   [ng-pattern="string"]
+                   [ng-change="string"]>
+        </section>
+<!--input for first and last name-->
+        <section class="name-wrap">
+        <section class="first-and-last-wrap">
+            <p class="first-name">first name</p>
+            <p class="last-name">last name</p>
+        </section>
+
+        <section class="fist-last-input-container">
+            <input id="input-first" type="text">
+            <input id="input-last" type="text">
+        </section>
+        </section>
+<!--input for company name-->
+        <section class="company-wrap">
+            <p class="company-title">company</p>
+            <input  id="company-input" type="text">
+        </section>
+<!--input for telephone number-->
+        <section class="telephone-wrap">
+            <p class="telephone-title">telephone (add '+' before the country code</p>
+            <input  id="telephone-input" type="text">
+        </section>
+<!--input for street address-->
+        <section class="address-wrap">
+            <p class="address-title">company</p>
+            <input  id="address-input" type="text">
+        </section>
+<!--input city and zip code-->
+        <section class="city-zip-wrap">
+            <section class="city-and-zip-wrap">
+                <p class="city-input">city</p>
+                <p class="zip-input">zip/postal code</p>
+            </section>
+
+            <section class="city-zip-input-container">
+                <input id="input-city" type="text">
+                <input id="input-zip" type="text">
+            </section>
+        </section>
+
+        <!--<section class="state-selection">-->
+            <!--<select ng-model="myState" ng-options="states.states for state in states"></select>-->
+        <!--</section>-->
+
+
+    </aside>
+</section>
+

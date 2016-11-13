@@ -79,7 +79,7 @@
     display: flex;
     background: #F4F4F4;
     margin-top:52px;
-    margin:0px auto;
+    margin:51px auto 0px;
 
     .checkout-results-img-container{
       display: flex;
@@ -118,10 +118,54 @@
         width: 100%;
         padding-top: 16.5px;
 
-        .checkout-color {@include checkout-detail-style}
+        .checkout-color {
+          @include checkout-detail-style;
+          margin-left:30px;
+        }
         .checkout-size {@include checkout-detail-style}
         .checkout-qty{@include checkout-detail-style}
         .checkout-total{@include checkout-detail-style}
+        #gold-circle {
+          //margin-top:16px;
+          //margin-left:10px;
+          background-color:$gold-color;
+          width:22px;
+          height:22px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+        }
+        #checkout-subtract{
+          position: relative;
+          margin-left:-155px;
+          background-color:lightgray;
+          width:17px;
+          height:17px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em;
+        }
+        #checkout-add{
+          position: relative;
+          margin-right:-155px;
+          background-color:lightgray;
+          width:17px;
+          height:17px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em;
+        }
       }
     }
   }

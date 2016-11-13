@@ -13,6 +13,9 @@ angular.module('dw-store').service('checkoutService', function($http) {
     this.getCart = function () {
         return self.checkoutItems;
     }
+
+
+
 });
 
 

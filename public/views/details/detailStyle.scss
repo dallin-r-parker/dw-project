@@ -42,19 +42,21 @@
     .attribute-gold-color{
       @include attribute-style;
       @include attribute-gold-style;
+      cursor: pointer;
     }
 
-    //.attribute-gold-color:hover {
-    //  color: #4F4F4F;
-    //  border: #4F4F4F solid .7px;
-    //}
+    .attribute-gold-color:hover {
+      color: #4F4F4F;
+      border: #4F4F4F solid .7px;
+      cursor: pointer;
+    }
     #gold-circle {@include gold-circle}
     #gold-style {
       margin-top:21px;
       margin-left:8px;
     }
 
-    .attribute-silver-color:hover {
+    .attribute-silver-color:hover{
       color: #4F4F4F;
       border: #4F4F4F solid .7px;
     }
@@ -62,6 +64,7 @@
     .attribute-silver-color{
       @include attribute-style;
       @include attribute-silver-style;
+      cursor: pointer;
     }
     #silver-circle{@include silver-circle}
     #silver-style{
