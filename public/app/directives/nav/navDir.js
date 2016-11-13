@@ -3,7 +3,15 @@ angular.module('dw-store')
         return {
             restrict: 'E',
             templateUrl: 'app/directives/nav/nav-tmpl.html',
-            // link: function (scope, element, attribute) {}
+            link: function (scope, element, attribute) {
+
+
+                $('.sub-nav-threedots').on('click', function () {
+                    $(this).toggleClass("toggle");
+                });
+
+
+            }
         }
     });
 //restrict with A,E, or AE

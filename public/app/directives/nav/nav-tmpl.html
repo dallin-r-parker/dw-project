@@ -10,8 +10,9 @@
         <p id="nav-women" class="hvr-underline-from-center">women</p>
         <p id="nav-watch-bands" class="hvr-underline-from-center">watch bands</p>
 
-        <aside class="sub-nav-threedots" ng-click="showDropMenu = !showDropMenu">
-                <section class="dot-centering"><i class="fa fa-circle" aria-hidden="true"></i>
+        <aside class="sub-nav-threedots" class="toggle" ng-click="showDropMenu = !showDropMenu;">
+                <section class="dot-centering">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
                     <i class="fa fa-circle" aria-hidden="true"></i>
                     <i class="fa fa-circle" aria-hidden="true"></i>
                 </section>
@@ -21,9 +22,9 @@
             <i class="fa fa-search" aria-hidden="true"></i>
         </aside>
         <aside class="nav-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true">1</i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </aside>
-
+        <section class="cart-circle"><aside id="qty-style">11</aside></section>
     </section>
 </nav>
 
@@ -37,9 +38,13 @@
     </section>
 </section>
 
-<section class="ship-promo" sticky ng-hide="showDropMenu">
-    <p class="promo-description"><div class="promo-lines"></div>free shipping worldwide when purchasing a watch<div class="promo-lines"></div></p>
-</section>
+<!--<section class="ship-promo" sticky ng-hide="showDropMenu">-->
+    <!--<p class="promo-description"><div class="promo-lines"></div>free shipping worldwide when purchasing a watch<div class="promo-lines"></div></p>-->
+<!--</section>-->
+
+<nav class="sub-nav-bar" sticky ng-hide="showDropMenu">
+    <div id="nav-left-line"></div><p>free shipping worldwide when purchasing a watch</p><div id="nav-right-line"></div>
+</nav>
 
 
 
