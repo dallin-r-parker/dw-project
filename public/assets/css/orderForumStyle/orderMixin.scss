@@ -29,3 +29,12 @@
   margin-left: 20px;
 }
 
+@mixin payment-style{
+  font-family:$logo-font;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left:3px;
+  margin-right:150px;
+  }
+
+

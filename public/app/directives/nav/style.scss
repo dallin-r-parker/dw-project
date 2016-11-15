@@ -32,6 +32,10 @@
   text-transform: uppercase;
   cursor: pointer;
       #nav-collection {@include vertical-centering}
+      #nav-collection:hover {
+        border-bottom: solid 1px #FFF;
+      }
+
       #nav-accessories {@include vertical-centering}
       #nav-men {@include vertical-centering}
       #nav-women {@include vertical-centering}

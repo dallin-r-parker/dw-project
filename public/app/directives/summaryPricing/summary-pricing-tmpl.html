@@ -1,0 +1,10 @@
+
+
+<section class="main-summary-wrapper" ng-repeat="items in cart">
+    <aside class="order-summary-container">
+        <aside class="selected-watch">{{qty}} {{items.category}} {{items.name}} {{items.size}} <p class="selected-pricing">{{items.price * qty | currency}}</p></aside>
+        <aside class="summary-shipping">Shipping & Handling (UPS Express)<p>$0</p></aside>
+        <aside class="holiday-discount">Discount (10% Holiday Offer) <p>$0</p></aside>
+
+    </aside>
+</section>

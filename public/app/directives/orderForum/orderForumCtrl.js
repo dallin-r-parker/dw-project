@@ -1,5 +1,4 @@
-angular.module('dw-store').controller('orderForumCtrl', function($scope) {
-$scope.myState = $scope.states[0];
+angular.module('dw-store').controller('orderForumCtrl', function($scope, checkoutService) {
 
     $scope.states = [
         {state: 'Alabama'},
@@ -51,10 +50,16 @@ $scope.myState = $scope.states[0];
         {state: 'West Virginia'},
         {state: 'Wisconsin'},
         {state: 'Wyoming'},
+    ];
+    $scope.myState = $scope.states[0];
+
+    $scope.cart = checkoutService.getCart();
 
 
+    // $(':input').click(function () {
+    //     $(this).css({"background": "#ffffff", "border": "#000000 solid 1px"})
+    // })
 
-    ]
 
 
 });

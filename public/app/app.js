@@ -1,7 +1,7 @@
-angular.module('dw-store', ['ui.router', 'slick', 'sticky', 'ui.bootstrap'])
+angular.module('dw-store', ['ui.router', 'slick', 'sticky'])
     .config(function($stateProvider, $urlRouterProvider) {
 
-        // $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
                 templateUrl: '../views/home/homeView.html',

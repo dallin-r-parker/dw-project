@@ -1,0 +1,23 @@
+.order-summary-container{
+  margin-top:10px;
+  margin-right:190px;
+  height:130px;
+  width:70%;
+  background: #fff;
+  border-top: solid 1px #DDD;
+  border-bottom: solid 1px #DDD;
+
+
+  .selected-watch{
+    display: flex;
+    justify-content:space-between;
+  }
+  .summary-shipping{
+    display: flex;
+    justify-content:space-between;
+  }
+  .holiday-discount{
+    display: flex;
+    justify-content:space-between;
+  }
+}

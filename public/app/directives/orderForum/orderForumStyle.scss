@@ -40,11 +40,12 @@
   width:100%;
   height:100vh;
   margin-top:55px;
-  background:lightgray;
 
   .customer-info-fillout-container {
-    width: 50%;
-    background: lightblue;
+    width: 55%;
+    background: #FFF;
+    margin-left:105px;
+
     .email-wrap {
       margin: 0px auto 20px;
       .email-title {
@@ -54,6 +55,14 @@
         @include single-input-style
       }
     }
+
+    input {
+      font-family:$logo-font;
+      font-size: 18px;
+      color: #4F4F4F;
+    }
+
+
 
     .name-wrap {
       margin-bottom: 20px;
@@ -71,7 +80,6 @@
       #input-last {@include last-input-style}
       #input-first {@include first-input-style}
     }
-
   }
 
   .company-wrap{
@@ -104,4 +112,152 @@
   }
   #input-city {@include first-input-style}
   #input-zip {@include last-input-style}
+}
+
+.state-wrap{
+  margin-bottom:20px;
+  .state-title{@include input-title-style}
+  #state-input{@include single-input-style}
+}
+
+
+.country-wrap{
+  margin-bottom:20px;
+  .country-title{@include input-title-style}
+  #country-input{@include single-input-style}
+}
+
+.delivery-font-style{
+  font-family:$logo-font;
+  font-size: 15px;
+}
+
+.forum-payment-options{
+  display: flex;
+  justify-content:center;
+  width: 70%;
+  margin-top:70px;
+
+  .payment-options-title{
+    font-family:$primary-font;
+    font-size:28px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    border-bottom: 1px solid lightgray;
+    padding-bottom:3px;
+    margin-bottom:50px;
+  }
+}
+
+.payment-radio-container{
+  //margin:0px auto;
+  width:70%;
+  margin-bottom:50px;
+}
+
+.payment-style{
+  @include payment-style;
+}
+.credit-input-style{
+  border:$border;
+  padding:$padding;
+
+  .credit-img-style{
+    max-height:20px;
+    max-width: 20px;
+    margin-right:2px;
+  }
+}
+
+.union-input-style{
+  padding: $padding;
+  border-bottom:$border;
+  border-right:$border;
+  border-left:$border;
+
+
+  .union-img-style{
+    max-height:25px;
+    max-width: 25px;
+    margin-left:170px;
+  }
+}
+
+.paypal-input-style{
+  padding: $padding;
+  border-bottom:$border;
+  border-right:$border;
+  border-left:$border;
+
+  .paypal-img-style{
+    max-height:25px;
+    max-width: 25px;
+    margin-left:193px;
+  }
+}
+
+.shipping-handling-container{
+  display: flex;
+  justify-content:center;
+  width: 70%;
+  margin-top:70px;
+  margin-bottom:50px;
+
+  .shipping-handling-title{
+    font-family:$primary-font;
+    font-size:28px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    border-bottom: 1px solid lightgray;
+    padding-bottom:3px;
+  }
+}
+
+.shipping-method-container{
+  display: flex;
+  width:65%;
+  width:65%;
+  border:#dfdfdf solid 1.7px;
+  background: #F7f7f7;
+  padding:25px;
+  margin-bottom:50px;
+
+  .shipping-text-style{
+    font-family:$logo-font;
+    font-size:14px;
+    margin-left:15px;
+    line-height:15px;
+  }
+
+  .ups-img-style{
+    max-width:60px;
+    max-height:60px;
+    margin-left:250px;
+  }
+}
+
+.main-summary-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height:100vh;
+}
+
+.order-summary-container{
+  margin-top:10px;
+  margin-right:190px;
+  height:130px;
+  width:70%;
+  background: #fff;
+  border-top: solid 1px #DDD;
+  border-bottom: solid 1px #DDD;
+
+  .summary-shipping{
+    display: flex;
+    justify-content:space-between;
+  }
+  .holiday-discount{
+    display: flex;
+    justify-content:space-between;
+  }
 }

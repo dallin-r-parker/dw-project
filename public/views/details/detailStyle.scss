@@ -74,6 +74,7 @@
 
 
     .attribute-shopnow{@include attribute-shopnow}
+    .attribute-shopnow{}
   }
 
 }
@@ -93,13 +94,8 @@
   .details-for-watch {
     width:100%;
     margin-bottom:100px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:column;
+
     .details-container {
-      display: flex;
-      //flex-wrap: wrap;
-      flex-direction:column;
       background:$footer-off-white;
       width:80%;
       height:280px;
@@ -107,19 +103,42 @@
 
 
       .details-title {@include detail-title-style}
-      .left-details{
-        display: flex;
-        width:50%;
-        height: 59.6%;
-        //background: red;
-      }
-      .right-details{
-        width:50%;
-        height: 59.6%;
-        //background: green;
-      }
+
+
+      table{
+        display: inline-block;
+        border-collapse: collapse;
+        height:56%;
+        color: #787878;
+        font-family:$primary-font;
+        margin-left:20px;
+        text-transform: uppercase;
+        tr {
+          width: 100%;
+          border-top: 1px solid #DADADA;
+          .table-data-style {
+            width: 100%;
+            display: flex;
+            justify-content:flex-end;
+            margin-right: 5px;
+            height:25px;
+          }
+        }
+     }
+.details-table-right{
+  width: 40%;
+  //margin-left:100px;
+}
+    }
+
+    .details-table-left{
+      width:40%;
     }
   }
+
+  //.details-table-right{
+  //  display: flex;
+  //}
 
   .inspiration-wrapper {
     width:100%;

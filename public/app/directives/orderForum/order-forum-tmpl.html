@@ -11,8 +11,8 @@
          <span id="summary-line"></span>
         </aside>
     </section>
+
     </section>
-</section>
 
 <section class="forum-fillout-wrapper">
     <aside class="customer-info-fillout-container">
@@ -71,10 +71,74 @@
         </section>
 
         <!--<section class="state-selection">-->
-            <!--<select ng-model="myState" ng-options="states.states for state in states"></select>-->
+            <!--<select ng-model="myState" ng-options="state.state for state in states"></select>-->
         <!--</section>-->
+<!--input state-->
+        <section class="state-wrap">
+            <p class="state-title">state/providence</p>
+            <input id="state-input" type="text">
+        </section>
+<!--input country-->
+        <section class="country-wrap">
+            <p class="country-title">country</p>
+            <input id="country-input" type="text">
+        </section>
+<!--input delivery address-->
+        <section class="delivery-address">
+            <input type="checkbox" id="checkbox-style">
+            <label class="delivery-font-style">Use different delivery address</label>
+        </section>
+<!--select payment method-->
+        <section class="forum-payment-options">
+            <p class="payment-options-title">payment options</p>
+        </section>
 
+        <section class="payment-radio-container">
+        <form name="paymentOptions">
 
+            <aside class="credit-input-style">
+                <input type="radio" value="creditCard">
+                <label class="payment-style">Credit Card</label>
+                <img src="../../../assets/img/payments/credit/jcb_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/sm_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/ae_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/dc_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/di_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/mc_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/vi_small.png" class="credit-img-style">
+            </aside>
+
+            <aside class="union-input-style">
+                <input type="radio" value="unionPay">
+                <label class="payment-style">UnionPay</label>
+                <img src="../../../assets/img/payments/union/unionpay.png" class="union-img-style">
+            </aside>
+
+            <aside class="paypal-input-style">
+                <input type="radio" value="payPal">
+                <label class="payment-style">PayPal</label>
+                <img src="../../../assets/img/payments/paypal/paypal.png" class="paypal-img-style">
+            </aside>
+        </form>
+        </section>
+
+<!--select shipping method-->
+        <section class="shipping-handling-container">
+            <p class="shipping-handling-title">shipping and handling</p>
+        </section>
+
+        <aside class="shipping-method-container">
+            <input type="radio" checked>
+            <label class="shipping-text-style">UPS Express (+ $0) <br><br>
+                UPS Express 2-3 working days</label>
+            <img src="../../../assets/img/payments/UPS_logo_2003.png" class="ups-img-style">
+        </aside>
     </aside>
-</section>
+
+
+    <!-- THIS IS WHERE THE RIGHT SIDE SUMMARY STARTS!-->
+        <summary-pricing-dir></summary-pricing-dir>
+
+
+
 
