@@ -541,24 +541,6 @@
       color: #333333;
       letter-spacing: 1.5px; }
 
-.order-summary-container {
-  margin-top: 10px;
-  margin-right: 190px;
-  height: 130px;
-  width: 70%;
-  background: #fff;
-  border-top: solid 1px #DDD;
-  border-bottom: solid 1px #DDD; }
-  .order-summary-container .selected-watch {
-    display: flex;
-    justify-content: space-between; }
-  .order-summary-container .summary-shipping {
-    display: flex;
-    justify-content: space-between; }
-  .order-summary-container .holiday-discount {
-    display: flex;
-    justify-content: space-between; }
-
 .main-forum-wrapper {
   width: 100%;
   margin-top: 95px; }
@@ -844,6 +826,24 @@
   background: #fff;
   border-top: solid 1px #DDD;
   border-bottom: solid 1px #DDD; }
+  .order-summary-container .summary-shipping {
+    display: flex;
+    justify-content: space-between; }
+  .order-summary-container .holiday-discount {
+    display: flex;
+    justify-content: space-between; }
+
+.order-summary-container {
+  margin-top: 10px;
+  margin-right: 190px;
+  height: 130px;
+  width: 70%;
+  background: #fff;
+  border-top: solid 1px #DDD;
+  border-bottom: solid 1px #DDD; }
+  .order-summary-container .selected-watch {
+    display: flex;
+    justify-content: space-between; }
   .order-summary-container .summary-shipping {
     display: flex;
     justify-content: space-between; }
@@ -1312,3 +1312,115 @@
     height: 368px;
     display: flex;
     justify-content: space-between; }
+    .main-detail-wrapper .ultra-thin-container .ultra-thin-centering {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-left: 200px; }
+      .main-detail-wrapper .ultra-thin-container .ultra-thin-centering .ultra-thin-title {
+        font-family: "Muli", sans-serif;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        color: #4F4F4F;
+        text-transform: uppercase; }
+      .main-detail-wrapper .ultra-thin-container .ultra-thin-centering .ultra-thin-title-detail {
+        font-family: "Taviraj", serif;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F4F4F;
+        margin-top: 10px; }
+    .main-detail-wrapper .ultra-thin-container .small-details {
+      font-family: "Taviraj", serif;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 22px;
+      color: #AAA;
+      margin-left: 80px; }
+    .main-detail-wrapper .ultra-thin-container img {
+      width: 400px;
+      height: 204px;
+      margin-top: 45px;
+      margin-right: 100px; }
+  .main-detail-wrapper .flagship-container {
+    display: flex;
+    width: 100%;
+    height: 579px;
+    background: url("../../assets/img/randoms/new-york-cab.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .main-detail-wrapper .flagship-container .flagship-img-style {
+      position: absolute;
+      width: 415px;
+      margin-left: 215px; }
+    .main-detail-wrapper .flagship-container .flagship-text-style {
+      width: 465px;
+      margin-left: 57%;
+      text-align: center;
+      color: #FFF;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-title {
+        font-family: "Muli", sans-serif;
+        font-size: 42px;
+        font-weight: lighter;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 3px; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-line {
+        height: 1px;
+        background: #FFF;
+        width: 100px;
+        margin: 0px auto;
+        margin-top: 10px; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-title-details {
+        font-family: "Taviraj", serif;
+        font-style: italic;
+        font-size: 21px;
+        font-weight: lighter;
+        line-height: 23px;
+        margin-top: 40px; }
+  .main-detail-wrapper .two-size-container {
+    width: 100%;
+    height: 552px;
+    display: flex;
+    justify-content: space-between; }
+    .main-detail-wrapper .two-size-container .two-size-img {
+      width: 399px;
+      height: 380px;
+      margin-left: 250px;
+      margin-top: 100px; }
+    .main-detail-wrapper .two-size-container .two-size-text {
+      width: 525px;
+      margin-top: 205px;
+      margin-right: 190px; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-title {
+        font-family: "Muli", sans-serif;
+        font-size: 24px;
+        font-weight: lighter;
+        line-height: 28px;
+        letter-spacing: 4px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: #4F4F4F;
+        text-align: center; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-title-details {
+        font-family: "Taviraj", serif;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F4F4F;
+        margin-bottom: 15px; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-link {
+        font-family: "Taviraj", serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 31px;
+        color: #4F4F4F;
+        text-align: center;
+        text-decoration: underline; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-link:hover {
+        text-decoration: none;
+        cursor: pointer; }
