@@ -14,6 +14,9 @@ angular.module('dw-store', ['ui.router', 'slick', 'sticky']).config(["$stateProv
         templateUrl: '../views/checkout/checkoutView.html',
         url: '/checkout',
         controller: 'checkoutCtrl'
+    }).state('newsletter', {
+        templateUrl: '../views/newsletter/newsletterView.html',
+        url: '/newsletter'
     });
 }]);
 'use strict';
@@ -181,11 +184,12 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
+angular.module('dw-store').directive('checkoutItemDir', function () {
 
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
+        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
+        controller: 'checkoutCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -204,12 +208,11 @@ angular.module('dw-store').directive('classicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('checkoutItemDir', function () {
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
 
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
-        controller: 'checkoutCtrl'
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -354,7 +357,7 @@ angular.module('dw-store').directive('inspirationDir', function () {
             $('.responsive').slick({
                 autoplay: true,
                 infinite: true,
-                speed: 1000,
+                speed: 800,
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 pauseOnFocus: true,
@@ -421,6 +424,22 @@ angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService"
 }]);
 'use strict';
 
+angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+
+    $scope.summary = checkoutService.getCart();
+}]);
+'use strict';
+
+angular.module('dw-store').directive('summaryPricingDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('orderForumCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
 
     $scope.states = [{ state: 'Alabama' }, { state: 'Alaska' }, { state: 'Arizona' }, { state: 'Arkansas' }, { state: 'California' }, { state: 'Colorado' }, { state: 'Connecticut' }, { state: 'Delaware' }, { state: 'Florida' }, { state: 'Georgia' }, { state: 'Hawaii' }, { state: 'Idaho' }, { state: 'Indiana' }, { state: 'Iowa' }, { state: 'Kansas' }, { state: 'Kentucky' }, { state: 'Louisiana' }, { state: 'Maine' }, { state: 'Maryland' }, { state: 'Massachusetts' }, { state: 'Michigan' }, { state: 'Minnesota' }, { state: 'Mississippi' }, { state: 'Missouri' }, { state: 'Montana' }, { state: 'Nebraska' }, { state: 'nevada' }, { state: 'New Hampshire' }, { state: 'New Jersey' }, { state: 'New Mexico' }, { state: 'New York' }, { state: 'North Carolina' }, { state: 'North Dakota' }, { state: 'Ohio' }, { state: 'Oklahoma' }, { state: 'Oregon' }, { state: 'Pennsylvania' }, { state: 'Rhode Island' }, { state: 'South Carolina' }, { state: 'South Dakota' }, { state: 'Tennessee' }, { state: 'Texas' }, { state: 'Utah' }, { state: 'Vermont' }, { state: 'Virginia' }, { state: 'Washington' }, { state: 'West Virginia' }, { state: 'Wisconsin' }, { state: 'Wyoming' }];
@@ -442,19 +461,3 @@ angular.module('dw-store').directive('orderForumDir', function () {
         templateUrl: 'app/directives/orderForum/order-forum-tmpl.html'
     };
 });
-'use strict';
-
-angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
-
-    $scope.summary = checkoutService.getCart();
-}]);
-'use strict';
-
-angular.module('dw-store').directive('summaryPricingDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
-    };
-});
-//restrict with A,E, or AE

@@ -9,7 +9,7 @@ angular.module('dw-store')
                 $('.responsive').slick({
                     autoplay: true,
                     infinite: true,
-                    speed: 1000,
+                    speed: 800,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     pauseOnFocus: true,

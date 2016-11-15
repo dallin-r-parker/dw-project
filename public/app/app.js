@@ -17,5 +17,9 @@ angular.module('dw-store', ['ui.router', 'slick', 'sticky'])
                 url: '/checkout',
                 controller: 'checkoutCtrl'
             })
+            .state('newsletter', {
+                templateUrl: '../views/newsletter/newsletterView.html',
+                url:'/newsletter',
+            })
 
     })

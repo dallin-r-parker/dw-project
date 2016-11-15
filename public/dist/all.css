@@ -1424,3 +1424,34 @@
       .main-detail-wrapper .two-size-container .two-size-text .two-size-link:hover {
         text-decoration: none;
         cursor: pointer; }
+
+.newsletter-wrapper {
+  width: 100%;
+  height: 324px;
+  display: flex;
+  justify-content: center; }
+  .newsletter-wrapper .newsletter-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .newsletter-wrapper .newsletter-container .newsletter-title {
+      font-family: "Muli", sans-serif;
+      font-weight: lighter;
+      font-size: 54px;
+      line-height: 64px;
+      color: #4F4F4F;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 5px; }
+    .newsletter-wrapper .newsletter-container .newsletter-line {
+      margin: 10px auto;
+      height: 1px;
+      width: 100px;
+      background: #AAA; }
+    .newsletter-wrapper .newsletter-container .verifiction1 {
+      font-family: "Taviraj", serif;
+      font-size: 16px;
+      line-height: 40px;
+      color: #4F4F4F;
+      text-align: center;
+      margin-bottom: 10px; }
