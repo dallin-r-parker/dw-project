@@ -1,6 +1,6 @@
 <nav class="main-nav-wrapper">
     <section class="nav-top-logo">
-        <img src="../../../assets/img/icons/logo/dw_logo_black.png" alt="Daniel Wellington Logo" ui-sref="home">
+        <img src="../../../assets/img/icons/logo/dw_logo_black.png" alt="Daniel Wellington Logo" ui-sref="home" id="dw-logo-img">
     </section>
 
     <section class="nav-bar-container">
@@ -24,7 +24,7 @@
         <aside class="nav-cart" ui-sref="checkout">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </aside>
-        <section class="cart-circle"><aside id="qty-style">11</aside></section>
+        <section class="cart-circle"><aside id="qty-style">{{cart.qty}}</aside></section>
     </section>
 </nav>
 
@@ -37,10 +37,6 @@
         <li class="nav-drop-text">help/support</li>
     </section>
 </section>
-
-<!--<section class="ship-promo" sticky ng-hide="showDropMenu">-->
-    <!--<p class="promo-description"><div class="promo-lines"></div>free shipping worldwide when purchasing a watch<div class="promo-lines"></div></p>-->
-<!--</section>-->
 
 <nav class="sub-nav-bar" sticky ng-hide="showDropMenu">
     <div id="nav-left-line"></div><p>free shipping worldwide when purchasing a watch</p><div id="nav-right-line"></div>

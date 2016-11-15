@@ -225,6 +225,11 @@ angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainServic
     $scope.getClassic();
 
     $scope.showNum = 3;
+
+    // $('.silver-color-selection').on('click', function () {
+    //     $('.gold-color-selection').css({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa"})
+    // })
+
 }]);
 'use strict';
 
@@ -235,7 +240,26 @@ angular.module('dw-store').directive('classicWatchDir', function () {
         controller: 'classicWatchCtrl',
         scope: {
             classics: '='
+        },
+        link: function link(scope, element, attribute) {
+            $('.silver-color-selection').on('click', function () {
+                $('.gold-color-selection').toggleClass(".gold-color-selection2");
+            });
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('dapHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('dapHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/dapHero/dap-hero-tmpl.html',
+        controller: 'dapHeroCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -260,20 +284,6 @@ angular.module('dw-store').directive('dapWatchDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/dapWatch/dap-watch-tmpl.html',
         controller: 'dapWatchCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('dapHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('dapHeroDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/dapHero/dap-hero-tmpl.html',
-        controller: 'dapHeroCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -331,6 +341,56 @@ angular.module('dw-store').directive('footerDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('inspirationCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('inspirationDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/inspirationCarousel/inspiration-tmpl.html',
+        link: function link(scope, element, attribute) {
+
+            $('.responsive').slick({
+                autoplay: true,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                pauseOnFocus: true,
+                useTransform: true,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+                ]
+            });
+        }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').directive('navDir', function () {
     return {
         restrict: 'E',
@@ -348,6 +408,10 @@ angular.module('dw-store').directive('navDir', function () {
 
 angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
     $scope.message = 1;
+
+    $scope.cart = checkoutService.getCart();
+
+    console.log(cart.qty);
     // $scope.ItemsInCart = function () {
     //     for(item in checkoutItems){
     //         if( )
@@ -355,22 +419,6 @@ angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService"
     // }
 
 }]);
-'use strict';
-
-angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
-
-    $scope.summary = checkoutService.getCart();
-}]);
-'use strict';
-
-angular.module('dw-store').directive('summaryPricingDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
 'use strict';
 
 angular.module('dw-store').controller('orderForumCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
@@ -394,3 +442,19 @@ angular.module('dw-store').directive('orderForumDir', function () {
         templateUrl: 'app/directives/orderForum/order-forum-tmpl.html'
     };
 });
+'use strict';
+
+angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+
+    $scope.summary = checkoutService.getCart();
+}]);
+'use strict';
+
+angular.module('dw-store').directive('summaryPricingDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
+    };
+});
+//restrict with A,E, or AE

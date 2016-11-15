@@ -6,6 +6,11 @@ angular.module('dw-store')
             controller: 'classicWatchCtrl',
             scope: {
                 classics: '='
+            },
+            link: function (scope, element, attribute) {
+                $('.silver-color-selection').on('click', function () {
+                    $('.gold-color-selection').toggleClass(".gold-color-selection2")
+                })
             }
         }
     });
