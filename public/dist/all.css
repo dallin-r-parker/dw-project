@@ -563,7 +563,7 @@
       .main-forum-wrapper .forum-title-centering .forum-title2-container .summary-title {
         font-family: "Muli", sans-serif;
         font-size: 28px;
-        margin-left: 250px;
+        margin-left: 315px;
         text-transform: uppercase;
         color: #4F4F4F;
         border-bottom: 1px solid lightgray;
@@ -815,39 +815,33 @@
 .main-summary-wrapper {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
-  height: 100vh; }
-
-.order-summary-container {
-  margin-top: 10px;
-  margin-right: 190px;
-  height: 130px;
-  width: 70%;
-  background: #fff;
-  border-top: solid 1px #DDD;
-  border-bottom: solid 1px #DDD; }
-  .order-summary-container .summary-shipping {
+  width: 53%; }
+  .main-summary-wrapper .order-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 190px;
+    height: 130px;
+    width: 100%;
+    background: #FFF;
+    border-top: solid 1px #DDD;
+    border-bottom: solid 1px #DDD;
+    font-family: "Taviraj", serif;
+    font-size: 18px;
+    color: #4F4F4F; }
+  .main-summary-wrapper .selected-watch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .main-summary-wrapper .summary-shipping {
     display: flex;
     justify-content: space-between; }
-  .order-summary-container .holiday-discount {
+  .main-summary-wrapper .holiday-discount {
     display: flex;
     justify-content: space-between; }
-
-.order-summary-container {
-  margin-top: 10px;
-  margin-right: 190px;
-  height: 130px;
-  width: 70%;
-  background: #fff;
-  border-top: solid 1px #DDD;
-  border-bottom: solid 1px #DDD; }
-  .order-summary-container .selected-watch {
-    display: flex;
-    justify-content: space-between; }
-  .order-summary-container .summary-shipping {
-    display: flex;
-    justify-content: space-between; }
-  .order-summary-container .holiday-discount {
+  .main-summary-wrapper .grand-total {
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between; }
 
@@ -1166,7 +1160,6 @@
     line-height: 34px;
     text-indent: 30px; }
   .main-detail-wrapper .details-for-watch {
-    width: 100%;
     margin-bottom: 100px; }
     .main-detail-wrapper .details-for-watch .details-container {
       background: #F4F4F4;
@@ -1180,28 +1173,26 @@
         font-size: 28px;
         text-align: center;
         letter-spacing: 3px;
-        padding: 50px 0px 35px 0px; }
+        padding: 50px 0px 35px 0px;
+        margin-right: 30px; }
       .main-detail-wrapper .details-for-watch .details-container table {
         display: inline-block;
         border-collapse: collapse;
         height: 56%;
         color: #787878;
         font-family: "Muli", sans-serif;
-        margin-left: 20px;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        mso-cellspacing: 10px;
+        margin-left: 48px; }
         .main-detail-wrapper .details-for-watch .details-container table tr {
-          width: 100%;
           border-top: 1px solid #DADADA; }
           .main-detail-wrapper .details-for-watch .details-container table tr .table-data-style {
-            width: 100%;
             display: flex;
             justify-content: flex-end;
             margin-right: 5px;
             height: 25px; }
       .main-detail-wrapper .details-for-watch .details-container .details-table-right {
-        width: 40%; }
-    .main-detail-wrapper .details-for-watch .details-table-left {
-      width: 40%; }
+        width: 45%; }
   .main-detail-wrapper .inspiration-wrapper {
     width: 100%;
     text-align: center;

@@ -137,7 +137,15 @@
 
 
     <!-- THIS IS WHERE THE RIGHT SIDE SUMMARY STARTS!-->
-        <summary-pricing-dir></summary-pricing-dir>
+    <section class="main-summary-wrapper" ng-repeat="items in cart">
+        <aside class="order-summary-container">
+            <aside class="selected-watch">{{qty}}x {{items.category}} {{items.name}} {{items.size}} <p class="selected-pricing">{{items.price * qty | currency}}</p></aside>
+            <aside class="summary-shipping">Shipping & Handling (UPS Express)<p>$0</p></aside>
+            <aside class="holiday-discount">Discount (10% Holiday Offer) <p>{{(items.price * qty) * (.1) | currency}}</p></aside>
+            <aside class="grand-total">grand total<p>{{(items.price) - ((qty * items.price) * (.1)) | currency}}</p></aside>
+        </aside>
+    </section>
+
 
 
 

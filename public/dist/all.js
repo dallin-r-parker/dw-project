@@ -149,12 +149,50 @@ angular.module('dw-store').service('mainService', ["$http", function ($http) {
 }]);
 'use strict';
 
+angular.module('dw-store').service('sendGridService', ["$http", function ($http) {
+
+    //add $q if needed
+
+    $http({
+        method: 'Post',
+        url: '/v3/templates/{template_id}/versions'
+    });
+
+    var request = sg.emptyRequest();
+    request.body = {
+        "active": 1,
+        "html_content": "<%body%>",
+        "name": "example_version_name",
+        "plain_content": "<%body%>",
+        "subject": "<%subject%>",
+        "template_id": "ddb96bbc-9b92-425e-8979-99464621b543"
+    };
+    request.method = 'POST';
+    request.path = '/v3/templates/{template_id}/versions';
+    sg.API(request, function (error, response) {
+        console.log(response.statusCode);
+        console.log(response.body);
+        console.log(response.headers);
+    });
+}]);
+'use strict';
+
 angular.module('dw-store').directive('blkClassicHeroDir', function () {
 
     return {
         restrict: 'E',
         templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
 
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -170,6 +208,20 @@ angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainSer
     $scope.getBlkClassic();
 
     $scope.showMeBlk = 3;
+
+    $(document).ready(function () {
+
+        $('.silver-color-selection').on('click', function () {
+            $('.gold-color-selection').not(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa" });
+            $(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646" });
+        });
+
+        $('.gold-color-selection').on('click', function () {
+            $('.silver-color-selection').not(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa" });
+            $(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646" });
+        });
+    }); //<-- End of jQuery script
+
 }]);
 'use strict';
 
@@ -178,7 +230,18 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
     return {
         restrict: 'E',
         templateUrl: 'app/directives/blkClassicWatch/blk-classic-watch-tmpl.html',
-        controller: 'blkClassicWatchCtrl'
+        controller: 'blkClassicWatchCtrl',
+        link: function link(scope, element, attribute) {
+            // $('.silver-color-selection').on('click', function () {
+            //     $('.gold-color-selection').toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa"});
+            //     $(this).toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646"})
+            // })
+            //
+            // $('.gold-color-selection').on('click', function () {
+            //     $('.silver-color-selection').toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa"});
+            //     $(this).toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646"})
+            // })
+        }
     };
 });
 //restrict with A,E, or AE
@@ -203,16 +266,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
         controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -424,22 +477,6 @@ angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService"
 }]);
 'use strict';
 
-angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
-
-    $scope.summary = checkoutService.getCart();
-}]);
-'use strict';
-
-angular.module('dw-store').directive('summaryPricingDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('orderForumCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
 
     $scope.states = [{ state: 'Alabama' }, { state: 'Alaska' }, { state: 'Arizona' }, { state: 'Arkansas' }, { state: 'California' }, { state: 'Colorado' }, { state: 'Connecticut' }, { state: 'Delaware' }, { state: 'Florida' }, { state: 'Georgia' }, { state: 'Hawaii' }, { state: 'Idaho' }, { state: 'Indiana' }, { state: 'Iowa' }, { state: 'Kansas' }, { state: 'Kentucky' }, { state: 'Louisiana' }, { state: 'Maine' }, { state: 'Maryland' }, { state: 'Massachusetts' }, { state: 'Michigan' }, { state: 'Minnesota' }, { state: 'Mississippi' }, { state: 'Missouri' }, { state: 'Montana' }, { state: 'Nebraska' }, { state: 'nevada' }, { state: 'New Hampshire' }, { state: 'New Jersey' }, { state: 'New Mexico' }, { state: 'New York' }, { state: 'North Carolina' }, { state: 'North Dakota' }, { state: 'Ohio' }, { state: 'Oklahoma' }, { state: 'Oregon' }, { state: 'Pennsylvania' }, { state: 'Rhode Island' }, { state: 'South Carolina' }, { state: 'South Dakota' }, { state: 'Tennessee' }, { state: 'Texas' }, { state: 'Utah' }, { state: 'Vermont' }, { state: 'Virginia' }, { state: 'Washington' }, { state: 'West Virginia' }, { state: 'Wisconsin' }, { state: 'Wyoming' }];
@@ -461,3 +498,19 @@ angular.module('dw-store').directive('orderForumDir', function () {
         templateUrl: 'app/directives/orderForum/order-forum-tmpl.html'
     };
 });
+'use strict';
+
+angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+
+    $scope.summary = checkoutService.getCart();
+}]);
+'use strict';
+
+angular.module('dw-store').directive('summaryPricingDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
+    };
+});
+//restrict with A,E, or AE

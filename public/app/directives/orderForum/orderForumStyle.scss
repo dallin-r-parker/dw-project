@@ -24,7 +24,7 @@
       .summary-title {
         font-family: $primary-font;
         font-size: 28px;
-        margin-left:250px;
+        margin-left:315px;
         text-transform: uppercase;
         color: #4F4F4F;
         border-bottom: 1px solid lightgray;
@@ -236,28 +236,45 @@
   }
 }
 
-.main-summary-wrapper{
+.main-summary-wrapper {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
-  height:100vh;
-}
+  width: 53%;
+  //height:100vh;
 
-.order-summary-container{
-  margin-top:10px;
-  margin-right:190px;
-  height:130px;
-  width:70%;
-  background: #fff;
-  border-top: solid 1px #DDD;
-  border-bottom: solid 1px #DDD;
-
-  .summary-shipping{
+  .order-summary-container {
     display: flex;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:space-around;
+    margin-top: 10px;
+    margin-right: 190px;
+    height: 130px;
+    width: 100%;
+    background: #FFF;
+    border-top: solid 1px #DDD;
+    border-bottom: solid 1px #DDD;
+    font-family:$logo-font;
+    font-size:18px;
+    color: #4F4F4F;
+
   }
-  .holiday-discount{
+  .selected-watch {
     display: flex;
-    justify-content:space-between;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .summary-shipping {
+    display: flex;
+    justify-content: space-between;
+  }
+  .holiday-discount {
+    display: flex;
+    justify-content: space-between;
+  }
+  .grand-total{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
   }
 }
