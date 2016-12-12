@@ -16,104 +16,6 @@
     text-align: center;
     line-height: 34px; }
 
-.classic-watch-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
-
-.classic-watch-container {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 60px; }
-  .classic-watch-container .top-watch-style {
-    margin-bottom: 30px;
-    font-family: "Muli", sans-serif;
-    font-size: 16px;
-    color: #747474;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500; }
-  .classic-watch-container .watch-size {
-    height: 306px;
-    width: 306px;
-    cursor: pointer; }
-  .classic-watch-container .bottom-watch-style {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 100%;
-    font-family: "Muli", sans-serif;
-    font-color: #747474;
-    font-size: 13.5px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    font-weight: 400; }
-  .classic-watch-container .watch-price-style {
-    color: #747474;
-    font-weight: 400; }
-
-.center-color-wrapper {
-  width: 100%; }
-  .center-color-wrapper .center-color-selector {
-    display: flex;
-    justify-content: center; }
-    .center-color-wrapper .center-color-selector .gold-color-selection {
-      background-color: #D8CBA1;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      box-shadow: inset 0 0 0 4px #fff,0 0 0 2px #464646;
-      border-radius: 50%;
-      cursor: pointer;
-      text-align: center; }
-    .center-color-wrapper .center-color-selector .gold-color-selection2 {
-      background-color: #D8CBA1;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
-      border-radius: 50%;
-      cursor: pointer;
-      text-align: center; }
-    .center-color-wrapper .center-color-selector .silver-color-selection {
-      margin-left: 10px;
-      background-color: #D0D0D0;
-      margin-bottom: 100px;
-      width: 22px;
-      height: 22px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
-      border-radius: 50%;
-      cursor: pointer; }
-
-.center-showall {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 45px; }
-  .center-showall .classic-showall {
-    display: flex;
-    justify-content: center;
-    height: 45px;
-    width: 160px;
-    background: #3A3A45; }
-    .center-showall .classic-showall #classic-showall {
-      font-family: "Muli", sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: #FFF;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 400;
-      cursor: pointer; }
-
 .classic-full-wrapper {
   width: 97%;
   max-width: 1414px;
@@ -218,6 +120,104 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #4F4F4F; }
+
+.classic-watch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.classic-watch-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 60px; }
+  .classic-watch-container .top-watch-style {
+    margin-bottom: 30px;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    color: #747474;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .classic-watch-container .watch-size {
+    height: 306px;
+    width: 306px;
+    cursor: pointer; }
+  .classic-watch-container .bottom-watch-style {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: "Muli", sans-serif;
+    font-color: #747474;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 400; }
+  .classic-watch-container .watch-price-style {
+    color: #747474;
+    font-weight: 400; }
+
+.center-color-wrapper {
+  width: 100%; }
+  .center-color-wrapper .center-color-selector {
+    display: flex;
+    justify-content: center; }
+    .center-color-wrapper .center-color-selector .gold-color-selection {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 2px #464646;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .gold-color-selection2 {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .silver-color-selection {
+      margin-left: 10px;
+      background-color: #D0D0D0;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
+      border-radius: 50%;
+      cursor: pointer; }
+
+.center-showall {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px; }
+  .center-showall .classic-showall {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 160px;
+    background: #3A3A45; }
+    .center-showall .classic-showall #classic-showall {
+      font-family: "Muli", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400;
+      cursor: pointer; }
 
 .footer-main-wrapper {
   width: 100%; }
@@ -1035,37 +1035,6 @@
     border-top: #C8C8C8 solid 1px;
     margin-top: 110px; }
 
-.newsletter-wrapper {
-  width: 100%;
-  height: 324px;
-  display: flex;
-  justify-content: center; }
-  .newsletter-wrapper .newsletter-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-    .newsletter-wrapper .newsletter-container .newsletter-title {
-      font-family: "Muli", sans-serif;
-      font-weight: lighter;
-      font-size: 54px;
-      line-height: 64px;
-      color: #4F4F4F;
-      text-transform: uppercase;
-      text-align: center;
-      letter-spacing: 5px; }
-    .newsletter-wrapper .newsletter-container .newsletter-line {
-      margin: 10px auto;
-      height: 1px;
-      width: 100px;
-      background: #AAA; }
-    .newsletter-wrapper .newsletter-container .verifiction1 {
-      font-family: "Taviraj", serif;
-      font-size: 16px;
-      line-height: 40px;
-      color: #4F4F4F;
-      text-align: center;
-      margin-bottom: 10px; }
-
 .main-detail-wrapper {
   width: 100%; }
   .main-detail-wrapper .watch-title {
@@ -1446,3 +1415,34 @@
       .main-detail-wrapper .two-size-container .two-size-text .two-size-link:hover {
         text-decoration: none;
         cursor: pointer; }
+
+.newsletter-wrapper {
+  width: 100%;
+  height: 324px;
+  display: flex;
+  justify-content: center; }
+  .newsletter-wrapper .newsletter-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .newsletter-wrapper .newsletter-container .newsletter-title {
+      font-family: "Muli", sans-serif;
+      font-weight: lighter;
+      font-size: 54px;
+      line-height: 64px;
+      color: #4F4F4F;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 5px; }
+    .newsletter-wrapper .newsletter-container .newsletter-line {
+      margin: 10px auto;
+      height: 1px;
+      width: 100px;
+      background: #AAA; }
+    .newsletter-wrapper .newsletter-container .verifiction1 {
+      font-family: "Taviraj", serif;
+      font-size: 16px;
+      line-height: 40px;
+      color: #4F4F4F;
+      text-align: center;
+      margin-bottom: 10px; }

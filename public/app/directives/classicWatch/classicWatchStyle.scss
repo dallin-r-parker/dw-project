@@ -13,37 +13,25 @@
   justify-content:space-around;
   text-align: center;
   margin-top:60px;
-
     .top-watch-style {@include top-watch-style}
-
     .watch-size {
       height:306px;
       width:306px;
       cursor: pointer;
     }
-
     .bottom-watch-style{@include bottom-watch-style}
     .watch-price-style{@include watch-price-style}
-
-
 }
-
 .center-color-wrapper {
   width:100%;
   .center-color-selector {
     display: flex;
     justify-content:center;
-
     .gold-color-selection {@include gold-color-selection}
     .gold-color-selection2 {@include gold-color-selection2}
-
     .silver-color-selection {@include silver-color-selection}
-
-
   }
 }
-
-
 .center-showall {
   display: flex;
   justify-content:center;
@@ -54,7 +42,6 @@
     height: 45px;
     width: 160px;
     background: #3A3A45;
-
     #classic-showall {
       font-family:$primary-font;
       display: flex;
@@ -68,9 +55,3 @@
     }
   }
 }
-
-//.correct-spacing {
-//  display: flex;
-//  justify-content:flex-end;
-//}
-

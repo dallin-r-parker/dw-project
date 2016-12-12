@@ -19,11 +19,9 @@ angular.module('dw-store').service('sendGridService', function($http) {
     request.method = 'POST'
     request.path = '/v3/templates/{template_id}/versions'
     sg.API(request, function (error, response) {
-        console.log(response.statusCode)
-        console.log(response.body)
-        console.log(response.headers)
+        // console.log(response.statusCode)
+        // console.log(response.body)
+        // console.log(response.headers)
     })
 
 });
-
-

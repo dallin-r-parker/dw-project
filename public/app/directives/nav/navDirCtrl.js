@@ -4,7 +4,7 @@ angular.module('dw-store')
 
         $scope.cart = checkoutService.getCart();
 
-        console.log(cart.qty);
+        // console.log(cart.qty);
         // $scope.ItemsInCart = function () {
         //     for(item in checkoutItems){
         //         if( )
