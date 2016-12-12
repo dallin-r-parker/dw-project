@@ -182,7 +182,27 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
     return {
         restrict: 'E',
         templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
 
+angular.module('dw-store').directive('checkoutItemDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
+        controller: 'checkoutCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -237,40 +257,6 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('checkoutItemDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
-        controller: 'checkoutCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getClassic = function () {
@@ -302,6 +288,19 @@ angular.module('dw-store').directive('classicWatchDir', function () {
                 $('.gold-color-selection').toggleClass(".gold-color-selection2");
             });
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
     };
 });
 //restrict with A,E, or AE
