@@ -238,6 +238,19 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').directive('bottomDescriptionDir', function () {
 
     return {
@@ -254,33 +267,6 @@ angular.module('dw-store').directive('checkoutItemDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
         controller: 'checkoutCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('dapHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('dapHeroDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/dapHero/dap-hero-tmpl.html',
-        controller: 'dapHeroCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -317,6 +303,20 @@ angular.module('dw-store').directive('classicWatchDir', function () {
                 $('.gold-color-selection').toggleClass(".gold-color-selection2");
             });
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('dapHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('dapHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/dapHero/dap-hero-tmpl.html',
+        controller: 'dapHeroCtrl'
     };
 });
 //restrict with A,E, or AE
