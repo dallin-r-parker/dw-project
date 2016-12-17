@@ -1,21 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400");
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 @import url("https://fonts.googleapis.com/css?family=Muli|Taviraj");
-.btm-description-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .btm-description-wrapper .btm-description-container {
-    width: 83%;
-    text-align: center;
-    margin-top: 53px;
-    margin-bottom: 80px; }
-  .btm-description-wrapper .btm-content {
-    font-family: "Taviraj", serif;
-    font-size: 24px;
-    text-align: center;
-    line-height: 34px; }
-
 .classic-full-wrapper {
   width: 97%;
   max-width: 1414px;
@@ -120,6 +105,21 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #4F4F4F; }
+
+.btm-description-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .btm-description-wrapper .btm-description-container {
+    width: 83%;
+    text-align: center;
+    margin-top: 53px;
+    margin-bottom: 80px; }
+  .btm-description-wrapper .btm-content {
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 34px; }
 
 .classic-watch-wrapper {
   width: 100%;
