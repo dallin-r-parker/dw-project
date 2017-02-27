@@ -46,23 +46,6 @@ app.get('/api/dapclassic', dbCtrl.getDapClassic);
 
 
 
-var sg = require('sendgrid')(sendgrid.env.SENDGRID_API_KEY);
-var request = sg.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: mail.toJSON(),
-});
-
-sg.API(request, function(error, response) {
-    // console.log(response.statusCode);
-    // console.log(response.body);
-    // console.log(response.headers);
-});
-
-
-
-
-
 
 app.listen(port, function(){
     console.log('Successfully Listening on: ' + port);

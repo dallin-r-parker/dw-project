@@ -194,12 +194,12 @@ angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainSer
             $scope.blkclassics = response.data;
         });
     };
+
     $scope.getBlkClassic();
 
     $scope.showMeBlk = 3;
 
     $(document).ready(function () {
-
         $('.silver-color-selection').on('click', function () {
             console.log("You just clicked the silver color");
             $('.gold-color-selection').not(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa" });
@@ -212,7 +212,6 @@ angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainSer
             $(this).css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646" });
         });
     }); //<-- End of jQuery script
-
 }]);
 'use strict';
 
@@ -238,6 +237,16 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').directive('checkoutItemDir', function () {
 
     return {
@@ -257,16 +266,6 @@ angular.module('dw-store').directive('classicHeroDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
         controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
