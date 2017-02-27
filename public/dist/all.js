@@ -187,6 +187,76 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
+'use strict';
+
+angular.module('dw-store').directive('classicHeroDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
+        controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('checkoutItemDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
+        controller: 'checkoutCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
+
+    $scope.getClassic = function () {
+        mainService.getClassic().then(function (response) {
+            $scope.classics = response.data;
+        });
+    };
+    $scope.getClassic();
+
+    $scope.showNum = 3;
+
+    $('.silver-color-selection').on('click', function (e) {
+        console.log('colors');
+        $('.gold-color-selection').css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa" });
+    });
+}]);
+'use strict';
+
+angular.module('dw-store').directive('classicWatchDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html',
+        controller: 'classicWatchCtrl',
+        scope: {
+            classics: '='
+        },
+        link: function link(scope, element, attribute) {
+            $('.silver-color-selection').on('click', function () {
+                $('.gold-color-selection').toggleClass(".gold-color-selection2");
+            });
+        }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
 angular.module('dw-store').controller('blkClassicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -231,76 +301,6 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
             //     $('.silver-color-selection').toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa"});
             //     $(this).toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646"})
             // })
-        }
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('checkoutItemDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
-        controller: 'checkoutCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicHeroCtrl', ["$scope", function ($scope) {}]);
-'use strict';
-
-angular.module('dw-store').directive('classicHeroDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
-        controller: 'classicHeroCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('classicWatchCtrl', ["$scope", "mainService", function ($scope, mainService) {
-
-    $scope.getClassic = function () {
-        mainService.getClassic().then(function (response) {
-            $scope.classics = response.data;
-        });
-    };
-    $scope.getClassic();
-
-    $scope.showNum = 3;
-
-    $('.silver-color-selection').on('click', function (e) {
-        console.log('colors');
-        $('.gold-color-selection').css({ "box-shadow": "inset 0 0 0 4px #fff,0 0 0 1px #aaa" });
-    });
-}]);
-'use strict';
-
-angular.module('dw-store').directive('classicWatchDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/classicWatch/classic-watch-tmpl.html',
-        controller: 'classicWatchCtrl',
-        scope: {
-            classics: '='
-        },
-        link: function link(scope, element, attribute) {
-            $('.silver-color-selection').on('click', function () {
-                $('.gold-color-selection').toggleClass(".gold-color-selection2");
-            });
         }
     };
 });
@@ -379,6 +379,36 @@ angular.module('dw-store').directive('detailsCarouselDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
+angular.module('dw-store').directive('navDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/nav/nav-tmpl.html',
+        link: function link(scope, element, attribute) {
+
+            $('.sub-nav-threedots').on('click', function () {
+                $(this).toggleClass("toggle");
+            });
+        }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+    $scope.message = 1;
+
+    $scope.cart = checkoutService.getCart();
+
+    // console.log(cart.qty);
+    // $scope.ItemsInCart = function () {
+    //     for(item in checkoutItems){
+    //         if( )
+    //     }
+    // }
+
+}]);
+'use strict';
+
 angular.module('dw-store').controller('footerCtrl', ["$scope", function ($scope) {
 
     $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
@@ -447,34 +477,20 @@ angular.module('dw-store').directive('inspirationDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('navDir', function () {
+angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
+
+    $scope.summary = checkoutService.getCart();
+}]);
+'use strict';
+
+angular.module('dw-store').directive('summaryPricingDir', function () {
+
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/nav/nav-tmpl.html',
-        link: function link(scope, element, attribute) {
-
-            $('.sub-nav-threedots').on('click', function () {
-                $(this).toggleClass("toggle");
-            });
-        }
+        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
     };
 });
 //restrict with A,E, or AE
-'use strict';
-
-angular.module('dw-store').controller('navDirCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
-    $scope.message = 1;
-
-    $scope.cart = checkoutService.getCart();
-
-    // console.log(cart.qty);
-    // $scope.ItemsInCart = function () {
-    //     for(item in checkoutItems){
-    //         if( )
-    //     }
-    // }
-
-}]);
 'use strict';
 
 angular.module('dw-store').controller('orderForumCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
@@ -498,22 +514,6 @@ angular.module('dw-store').directive('orderForumDir', function () {
         templateUrl: 'app/directives/orderForum/order-forum-tmpl.html'
     };
 });
-'use strict';
-
-angular.module('dw-store').controller('summaryPricingCtrl', ["$scope", "checkoutService", function ($scope, checkoutService) {
-
-    $scope.summary = checkoutService.getCart();
-}]);
-'use strict';
-
-angular.module('dw-store').directive('summaryPricingDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/summaryPricing/summary-pricing-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
 "use strict";
 
 !function () {
