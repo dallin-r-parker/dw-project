@@ -1,0 +1,37 @@
+.newsletter-wrapper{
+  width: 100%;
+  height: 324px;
+  display: flex;
+  justify-content:center;
+  .newsletter-container{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+
+    .newsletter-title{
+      font-family:$primary-font;
+      font-weight:lighter;
+      font-size: 54px;
+      line-height:64px;
+      color: #4F4F4F;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+    .newsletter-line{
+      margin: 10px auto;
+      height:1px;
+      width: 100px;
+      background: #AAA;
+    }
+    .verifiction1{
+      font-family:$logo-font;
+      font-size: 16px;
+      line-height:40px;
+      color: #4F4F4F;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+  }
+}

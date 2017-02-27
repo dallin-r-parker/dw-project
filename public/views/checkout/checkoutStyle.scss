@@ -1,0 +1,199 @@
+.main-checkout-wrapper {
+  width: 100%;
+  .checkout-nav-container {
+    height:125px;
+    display: flex;
+    justify-content:center;
+    #dw-logo-img {
+      padding-top: 20px;
+      width: 154px;
+      height: 62px;
+    }
+  }
+
+  .nav-continue-shopping{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    height: 52px;
+    width: 100%;
+    background: #3F3F4A;
+    color: #fff;
+    font-family:$primary-font;
+    text-transform: uppercase;
+    font-size:16px;
+    .continue-shopping {
+      margin-left:200px;
+    }
+    #double-arrow-style{
+      font-size:11.5px;
+    }
+  }
+
+  .sub-nav-bar{
+    display: flex;
+    justify-content:center;
+    height: 26px;
+    padding-top:19px;
+    background: #F4F4F4;
+    font-family:$primary-font;
+    text-transform: uppercase;
+    font-size:13px;
+    letter-spacing:3px;
+    #nav-left-line{@include nav-left-line}
+    #nav-right-line{@include nav-right-line}
+  }
+
+  .checkout-title-wrapper{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    width:100%;
+    margin: 60px 0px 30px;
+    .checkout-title-container {
+      display: flex;
+      justify-content:center;
+      .checkout-title{
+        font-family: $primary-font;
+        font-size:50px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: #4F4F4F;
+
+      }
+    }
+  }
+  .line-center {
+    display: flex;
+    justify-content:center;
+    #checkout-line {
+      width: 82px;
+      height: 1px;
+      background: #DDD;
+    }
+  }
+
+  .checkout-results-wrapper{
+    height:132px;
+    width:80%;
+    display: flex;
+    background: #F4F4F4;
+    margin-top:52px;
+    margin:51px auto 0px;
+
+    .checkout-results-img-container{
+      display: flex;
+      justify-content:center;
+      height:100%;
+      margin:0px 30px;
+        img {
+          max-width:114%;
+          max-height:115%;
+        }
+    }
+
+    .checkout-detail-wrapper {
+      display: flex;
+      flex-direction:column;
+      width:100%;
+      .checkout-detail-results {
+        display: flex;
+        height: 66px;
+        width: 100%;
+        padding-top: 33px;
+        border-bottom: #DDD solid 1px;
+          .checkout-watch-name{
+            font-family:$primary-font;
+            font-size:22px;
+            text-transform: uppercase;
+            color: #4F4F4F;
+            letter-spacing:3px;
+            font-weight:lighter;
+          }
+      }
+      .checkout-watch-details {
+        display: flex;
+        justify-content: space-between;
+        height: 66px;
+        width: 100%;
+        padding-top: 16.5px;
+
+        .checkout-color {
+          @include checkout-detail-style;
+          margin-left:30px;
+        }
+        .checkout-size {@include checkout-detail-style}
+        .checkout-qty{@include checkout-detail-style}
+        .checkout-total{@include checkout-detail-style}
+        #gold-circle {
+          //margin-top:16px;
+          //margin-left:10px;
+          background-color:$gold-color;
+          width:22px;
+          height:22px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+        }
+        #checkout-subtract{
+          position: relative;
+          margin-left:-155px;
+          background-color:lightgray;
+          width:17px;
+          height:17px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em;
+        }
+        #checkout-add{
+          position: relative;
+          margin-right:-155px;
+          background-color:lightgray;
+          width:17px;
+          height:17px;
+          -webkit-border-radius:50%;
+          -moz-border-radius:50%;
+          border-radius:50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .checkout-addmore-wrapper{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    height:50px;
+    width:245px;
+    margin:50px auto 0px;
+    background: #3A3A45;
+    .checkout-addmore-container{
+      display: flex;
+      justify-content:center;
+      color: #fff;
+      font-size:13px;
+      text-transform: uppercase;
+      font-family:$primary-font;
+
+      #plus-sign-style{
+        font-size: 9px;
+        margin-right:4px;
+      }
+    }
+  }
+
+  .checkout-middle-line{
+    border-top: #C8C8C8 solid 1px;
+    margin-top:110px;
+  }
+}

@@ -1,0 +1,25 @@
+<section class="checkout-results-wrapper" ng-repeat="items in cart track by $index">
+    <section class="checkout-results-img-container">
+        <img ng-src="{{items.carousel_gold2}}">
+    </section>
+
+    <section class="checkout-detail-wrapper">
+        <section class="checkout-detail-results">
+            <p class="checkout-watch-name">{{items.category}} {{items.name}} {{items.size}}</p>
+        </section>
+
+        <section class="checkout-watch-details">
+            <aside id="gold-circle"><p class="checkout-color">Rose Gold</p></aside>
+            <p class="checkout-size">{{items.size}}</p>
+            <p class="checkout-qty"><div id="checkout-add" ng-click="cartAddition()">+</div>{{qty}}<div id="checkout-subtract" ng-click="cartSubtraction()">-</div></p>
+            <p class="checkout-total" ng-click="cartTotal()">{{items.price * qty | currency}}</p>
+        </section>
+    </section>
+</section>
+
+<section class="checkout-addmore-wrapper">
+    <section class="checkout-addmore-container">
+        <i class="fa fa-plus" aria-hidden="true" id="plus-sign-style"></i><p>add extra watch band</p>
+    </section>
+</section>
+

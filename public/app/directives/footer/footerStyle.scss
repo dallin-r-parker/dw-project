@@ -1,0 +1,201 @@
+
+.footer-main-wrapper {
+  width: 100%;
+
+
+  .top-footer-container{
+    display: flex;
+    justify-content:center;
+    height:65px;
+    background: $footer-off-white;
+
+    .top-footer-content {
+      display: flex;
+      flex-direction:column;
+      justify-content:center;
+      margin-left:50px;
+      text-transform: uppercase;
+      font-family:$primary-font;
+      font-size:14px;
+      color:#4F4F4F;
+    }
+  }
+
+  .footer-news-container {
+    width:100%;
+    height:380px;
+    background: $news-bg-color;
+
+    .footer-get-news-container {
+      display: flex;
+      justify-content:center;
+
+      .footer-get-news {
+        font-family: $logo-font;
+        font-size: 36px;
+        line-height: 50px;
+        font-style: italic;
+        color: #FFF;
+        margin-top:65px;
+      }
+    }
+  }
+
+  .footer-social-media {
+    margin-top:55px;
+    display: flex;
+    justify-content:center;
+
+    .social-media-style {
+      color: #FFF;
+      font-size:2em;
+      margin-left:23px;
+    }
+  }
+
+  .or-style {
+    display: flex;
+    justify-content:center;
+    margin-top:20px;
+    font-family: $logo-font;
+    font-size: 16px;
+    color: #FFF;
+
+       #left-line {
+        display: flex;
+        justify-content:center;
+        height:1px;
+        width:64px;
+        background: #FFF;
+        margin-right:15px;
+         margin-top:7px;
+      }
+      #right-line {
+        display: flex;
+        justify-content:center;
+        height:1px;
+        width:64px;
+        background: #FFF;
+        margin-left:15px;
+        margin-top:8px;
+      }
+   }
+
+  .email-container {
+    display: flex;
+    justify-content:center;
+    margin-top:38px;
+  }
+
+  .email-input {
+    width: 400px;
+    height: 50px;
+    border: #FFF solid 1px;
+    background: #FFF;
+  }
+
+  input::-moz-placeholder {@include input-placeholder-style}
+  input::-webkit-input-placeholder{@include input-placeholder-style}
+  input:-ms-input-placeholder{@include input-placeholder-style}
+
+  .email-button {
+    border: #fff solid 1px;
+    width: 140px;
+    height:52px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-family:$primary-font;
+    font-size:16px;
+  }
+
+    .shipping-payment-info {
+      width:100%;
+      height:318px;
+      background: url("../../../assets/img/footer/footer-background.jpg") center no-repeat;
+      display: flex;
+      justify-content:space-around;
+
+
+      .country-selection{
+        @include footer-shipping-content-style
+        .country-options{
+          select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          width: 300px;
+          height: 52px;
+          font-family:$primary-font;
+          text-transform: uppercase;
+          background: $footer-off-white;
+          //background-image: url("../../../assets/img/flags/usa-flag.png");
+          //background-repeat: no-repeat;
+          //background-position: center;
+          margin-top:25px;
+          text-align: center;
+
+        }
+
+      }
+      .shipping-partners{@include footer-shipping-content-style
+        img {@include shipping-payment-img-style}
+      }
+
+      .payment-partners{@include footer-shipping-content-style
+          img {@include shipping-payment-img-style}
+      }
+    }
+
+  .bottom-footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    background: #FFF;
+
+    .bottom-footer-container{
+      display: flex;
+      flex-direction:column;
+      justify-content:center;
+      margin: 50px auto;
+
+      img {
+          width:156px;
+          height:63px;
+      }
+      .dw-footer-logo {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .top-bottom-policy-lines{
+    display: flex;
+    justify-content:space-around;
+    background: #FFF;
+    width:100%;
+    border-bottom: #C7C7C7 solid 1px;
+    border-top: #C7C7C7 solid 1px;
+    text-align: center;
+  }
+  .bottom-footer-terms-policy {
+    display: flex;
+    justify-content:center;
+    width:100%;
+    font-family:$logo-font;
+    margin:15px 0px;
+    background: #FFF;
+  }
+
+  .copyright {
+    background: #FFF;
+    font-family:$primary-font;
+    font-size: 11px;
+    text-align: center;
+    margin:30px 0px;
+    font-weight: bold;
+    color: #4F4F4F;
+  }
+}
+
+

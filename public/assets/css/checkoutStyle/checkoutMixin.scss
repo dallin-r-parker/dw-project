@@ -1,0 +1,24 @@
+@mixin nav-left-line{
+  height:1px;
+  width: 63px;
+  background: #DDDDDD;
+  margin-right:20px;
+  margin-top: 6px;
+}
+
+@mixin nav-right-line{
+  height:1px;
+  width: 63px;
+  background: #DDDDDD;
+  margin-left:20px;
+  margin-top: 6px;
+}
+
+@mixin checkout-detail-style{
+  font-family:$primary-font;
+  font-size: 16px;
+  color: #787878;
+  text-transform: uppercase;
+  font-weight:400;
+
+}

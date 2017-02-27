@@ -1,0 +1,40 @@
+@mixin input-title-style{
+  font-family: $primary-font;
+  font-size:14px;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom:5px;
+}
+
+@mixin single-input-style{
+  height:50px;
+  //width:487px;
+  width:70%;
+  border:#dfdfdf solid 1.7px;
+  background: #F7f7f7;
+}
+
+@mixin first-input-style {
+  width:33%;
+  height: 50px;
+  border:#dfdfdf solid 1.7px;
+  background: #F7f7f7;
+}
+
+@mixin last-input-style{
+  width:33%;
+  height: 50px;
+  border:#dfdfdf solid 1.7px;
+  background: #F7f7f7;
+  margin-left: 20px;
+}
+
+@mixin payment-style{
+  font-family:$logo-font;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left:3px;
+  margin-right:150px;
+  }
+
+

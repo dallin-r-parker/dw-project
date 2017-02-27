@@ -171,6 +171,18 @@
       height: 22px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 2px #464646;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center; }
+    .center-color-wrapper .center-color-selector .gold-color-selection2 {
+      background-color: #D8CBA1;
+      margin-bottom: 100px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
       border-radius: 50%;
       cursor: pointer;
       text-align: center; }
@@ -182,6 +194,7 @@
       height: 22px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
+      box-shadow: inset 0 0 0 4px #fff,0 0 0 1px #aaa;
       border-radius: 50%;
       cursor: pointer; }
 
@@ -393,12 +406,13 @@
 
 .nav-top-logo {
   width: 100%;
+  height: 125px;
   background: #FFFFFF;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 35px; }
+  cursor: pointer; }
   .nav-top-logo img {
+    padding-top: 20px;
     width: 154px;
     height: 62px; }
   .nav-top-logo .logo-style {
@@ -414,206 +428,410 @@
   color: #FFFFFF;
   font-family: "Muli", sans-serif;
   font-size: 15px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
   .nav-bar-container #nav-collection {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
+    padding: 10px; }
+  .nav-bar-container #nav-collection:hover {
+    border-bottom: solid 1px #FFF; }
   .nav-bar-container #nav-accessories {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
+    padding: 10px; }
   .nav-bar-container #nav-men {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
+    padding: 10px; }
   .nav-bar-container #nav-women {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
+    padding: 10px; }
   .nav-bar-container #nav-watch-bands {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
+    padding: 10px; }
   .nav-bar-container .nav-search-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.3em; }
   .nav-bar-container .nav-cart {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    font-size: 1.3em; }
-  .nav-bar-container .threedots {
-    background: #F4F4F4; }
+    padding: 10px;
+    font-size: 1.6em; }
+  .nav-bar-container .cart-circle #qty-style {
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    margin: 3px 1px; }
   .nav-bar-container .dot-centering {
     font-size: 7px;
     padding-top: 21px;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    width: 35px;
+    cursor: pointer;
+    height: 100%;
+    margin-left: 6px; }
+  .nav-bar-container .toggle {
+    background: #F4F4F4;
+    color: #3F3F4A; }
 
-.ship-promo {
+.sub-nav-bar {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 38px;
-  background-color: #F4F4F4;
+  height: 26px;
+  padding-top: 19px;
+  background: #F4F4F4;
+  font-family: "Muli", sans-serif;
   text-transform: uppercase;
-  text-align: center;
   font-size: 13px;
-  color: #333333;
-  letter-spacing: 1.5px; }
+  letter-spacing: 3px; }
+  .sub-nav-bar #nav-left-line {
+    height: 1px;
+    width: 63px;
+    background: #DDDDDD;
+    margin-right: 20px;
+    margin-top: 6px; }
+  .sub-nav-bar #nav-right-line {
+    height: 1px;
+    width: 63px;
+    background: #DDDDDD;
+    margin-left: 20px;
+    margin-top: 6px; }
 
-.main-detail-wrapper {
-  width: 100%; }
-  .main-detail-wrapper .watch-title {
-    text-align: center;
-    text-transform: uppercase;
-    color: #4f4f4f; }
-    .main-detail-wrapper .watch-title #watch-size {
-      margin-top: 30px;
-      font-family: "Muli", sans-serif;
-      font-size: 16px;
-      font-weight: 900;
-      letter-spacing: 3px; }
-    .main-detail-wrapper .watch-title #selected-watch {
-      font-family: "Muli", sans-serif;
-      font-size: 50px;
-      font-weight: lighter;
-      letter-spacing: 5px;
-      margin-top: 14px; }
-  .main-detail-wrapper .carousel-container {
-    border: lightgray solid .7px;
-    height: 430px; }
-  .main-detail-wrapper .watch-attribute-wrapper {
-    width: 100%;
-    height: 82px; }
-    .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container {
-      display: flex; }
-      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-size {
-        width: 157px;
-        height: 54px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        background: #FFF;
-        color: #4F4F4F;
-        margin-left: 20px;
-        font-family: "Muli", sans-serif;
-        background: #F4F4F4;
-        font-size: 15px; }
-      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color {
-        width: 157px;
-        height: 54px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        background: #FFF;
-        color: #4F4F4F;
-        margin-left: 20px;
-        font-family: "Muli", sans-serif; }
-      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color:hover {
-        color: red; }
-      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-silver-color {
-        width: 157px;
-        height: 54px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        background: #FFF;
-        color: #4F4F4F;
-        margin-left: 20px;
-        font-family: "Muli", sans-serif;
-        text-transform: uppercase;
-        border: #4F4F4F solid .7px;
-        font-size: 14px; }
-      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-shopnow {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 56px;
-        width: 320px;
-        margin-left: 30%;
-        background: #479E7A;
-        text-align: center;
-        font-family: "Muli", sans-serif;
-        color: #fff;
-        font-size: 20px;
-        text-transform: uppercase;
-        word-spacing: 3px;
-        font-weight: bold; }
-  .main-detail-wrapper .watch-details-container {
-    width: 100%; }
-  .main-detail-wrapper .watch-description {
-    width: 80%;
-    margin: 62px auto 0px;
-    font-family: "Taviraj", serif;
-    font-size: 24px;
-    line-height: 34px;
-    text-indent: 30px; }
-  .main-detail-wrapper .details-for-watch {
-    width: 100%;
-    margin-bottom: 100px;
+.nav-sub-menu-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 52px;
+  width: 100%;
+  background: #F4F4F4; }
+  .nav-sub-menu-wrapper .nav-sub-menu-container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; }
-    .main-detail-wrapper .details-for-watch .details-container {
+    justify-content: center; }
+    .nav-sub-menu-wrapper .nav-sub-menu-container .nav-drop-text {
       display: flex;
-      flex-wrap: wrap;
-      background: #F4F4F4;
-      width: 80%;
-      height: 280px;
-      margin: 60px auto 0px; }
-      .main-detail-wrapper .details-for-watch .details-container .details-title {
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 15px;
+      color: #333333;
+      letter-spacing: 1.5px; }
+
+.main-forum-wrapper {
+  width: 100%;
+  margin-top: 95px; }
+  .main-forum-wrapper .forum-title-centering {
+    width: 80%;
+    text-align: center; }
+    .main-forum-wrapper .forum-title-centering .forum-title1-container {
+      display: inline-block; }
+      .main-forum-wrapper .forum-title-centering .forum-title1-container .customer-info-title {
         font-family: "Muli", sans-serif;
-        color: #525252;
-        text-transform: uppercase;
         font-size: 28px;
-        text-align: center;
-        letter-spacing: 3px;
-        padding: 50px 0px 35px 0px; }
-      .main-detail-wrapper .details-for-watch .details-container .left-details {
-        display: flex;
-        width: 50%;
-        height: 59.6%;
-        background: red; }
-      .main-detail-wrapper .details-for-watch .details-container .right-details {
-        width: 50%;
-        height: 59.6%;
-        background: green; }
-  .main-detail-wrapper .inspiration-wrapper {
-    width: 100%;
-    text-align: center;
+        color: #4F4F4F;
+        text-transform: uppercase;
+        margin-right: 100px;
+        margin-left: 100px;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 3px; }
+    .main-forum-wrapper .forum-title-centering .forum-title2-container {
+      display: inline-block; }
+      .main-forum-wrapper .forum-title-centering .forum-title2-container .summary-title {
+        font-family: "Muli", sans-serif;
+        font-size: 28px;
+        margin-left: 315px;
+        text-transform: uppercase;
+        color: #4F4F4F;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 3px;
+        margin-bottom: -22px; }
+
+.forum-fillout-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin-top: 55px; }
+  .forum-fillout-wrapper .customer-info-fillout-container {
+    width: 55%;
+    background: #FFF;
+    margin-left: 105px; }
+    .forum-fillout-wrapper .customer-info-fillout-container .email-wrap {
+      margin: 0px auto 20px; }
+      .forum-fillout-wrapper .customer-info-fillout-container .email-wrap .email-title {
+        font-family: "Muli", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #222;
+        margin-bottom: 5px; }
+      .forum-fillout-wrapper .customer-info-fillout-container .email-wrap #email-info {
+        height: 50px;
+        width: 70%;
+        border: #dfdfdf solid 1.7px;
+        background: #F7f7f7; }
+    .forum-fillout-wrapper .customer-info-fillout-container input {
+      font-family: "Taviraj", serif;
+      font-size: 18px;
+      color: #4F4F4F; }
+    .forum-fillout-wrapper .customer-info-fillout-container .name-wrap {
+      margin-bottom: 20px; }
+      .forum-fillout-wrapper .customer-info-fillout-container .name-wrap .first-and-last-wrap {
+        margin-top: 5px;
+        display: flex; }
+        .forum-fillout-wrapper .customer-info-fillout-container .name-wrap .first-and-last-wrap .first-name {
+          font-family: "Muli", sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #222;
+          margin-bottom: 5px; }
+        .forum-fillout-wrapper .customer-info-fillout-container .name-wrap .first-and-last-wrap .last-name {
+          font-family: "Muli", sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #222;
+          margin-bottom: 5px;
+          margin-left: 177px; }
+      .forum-fillout-wrapper .customer-info-fillout-container .name-wrap #input-last {
+        width: 33%;
+        height: 50px;
+        border: #dfdfdf solid 1.7px;
+        background: #F7f7f7;
+        margin-left: 20px; }
+      .forum-fillout-wrapper .customer-info-fillout-container .name-wrap #input-first {
+        width: 33%;
+        height: 50px;
+        border: #dfdfdf solid 1.7px;
+        background: #F7f7f7; }
+  .forum-fillout-wrapper .company-wrap {
+    margin-bottom: 20px; }
+    .forum-fillout-wrapper .company-wrap .company-title {
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 5px; }
+    .forum-fillout-wrapper .company-wrap #company-input {
+      height: 50px;
+      width: 70%;
+      border: #dfdfdf solid 1.7px;
+      background: #F7f7f7; }
+  .forum-fillout-wrapper .telephone-wrap {
+    margin-bottom: 20px; }
+    .forum-fillout-wrapper .telephone-wrap .telephone-title {
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 5px; }
+    .forum-fillout-wrapper .telephone-wrap #telephone-input {
+      height: 50px;
+      width: 70%;
+      border: #dfdfdf solid 1.7px;
+      background: #F7f7f7; }
+  .forum-fillout-wrapper .address-wrap {
+    margin-bottom: 20px; }
+    .forum-fillout-wrapper .address-wrap .address-title {
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 5px; }
+    .forum-fillout-wrapper .address-wrap #address-input {
+      height: 50px;
+      width: 70%;
+      border: #dfdfdf solid 1.7px;
+      background: #F7f7f7; }
+
+.city-zip-wrap {
+  margin-bottom: 20px; }
+  .city-zip-wrap .city-and-zip-wrap {
+    margin-top: 5px;
+    display: flex; }
+    .city-zip-wrap .city-and-zip-wrap .city-input {
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 5px; }
+    .city-zip-wrap .city-and-zip-wrap .zip-input {
+      font-family: "Muli", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 5px;
+      margin-left: 232px; }
+  .city-zip-wrap #input-city {
+    width: 33%;
+    height: 50px;
+    border: #dfdfdf solid 1.7px;
+    background: #F7f7f7; }
+  .city-zip-wrap #input-zip {
+    width: 33%;
+    height: 50px;
+    border: #dfdfdf solid 1.7px;
+    background: #F7f7f7;
+    margin-left: 20px; }
+
+.state-wrap {
+  margin-bottom: 20px; }
+  .state-wrap .state-title {
     font-family: "Muli", sans-serif;
-    text-transform: uppercase; }
-    .main-detail-wrapper .inspiration-wrapper .inspiration-title {
-      font-size: 55px;
-      line-height: 65px;
-      color: #4f4f4f;
-      font-weight: lighter;
-      letter-spacing: 7px; }
-    .main-detail-wrapper .inspiration-wrapper .inspiration-subtitle {
-      font-size: 25px;
-      line-height: 29px;
-      color: #AAA;
-      letter-spacing: 8.5px;
-      word-spacing: 3.5px; }
-    .main-detail-wrapper .inspiration-wrapper .inspiration-bottom-line {
-      width: 92px;
-      height: 1px;
-      background: #4f4f4f;
-      margin: 18px auto; }
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 5px; }
+  .state-wrap #state-input {
+    height: 50px;
+    width: 70%;
+    border: #dfdfdf solid 1.7px;
+    background: #F7f7f7; }
+
+.country-wrap {
+  margin-bottom: 20px; }
+  .country-wrap .country-title {
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 5px; }
+  .country-wrap #country-input {
+    height: 50px;
+    width: 70%;
+    border: #dfdfdf solid 1.7px;
+    background: #F7f7f7; }
+
+.delivery-font-style {
+  font-family: "Taviraj", serif;
+  font-size: 15px; }
+
+.forum-payment-options {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 70px; }
+  .forum-payment-options .payment-options-title {
+    font-family: "Muli", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 3px;
+    margin-bottom: 50px; }
+
+.payment-radio-container {
+  width: 70%;
+  margin-bottom: 50px; }
+
+.payment-style {
+  font-family: "Taviraj", serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left: 3px;
+  margin-right: 150px; }
+
+.credit-input-style {
+  border: 1px solid #dfdfdf;
+  padding: 15px; }
+  .credit-input-style .credit-img-style {
+    max-height: 20px;
+    max-width: 20px;
+    margin-right: 2px; }
+
+.union-input-style {
+  padding: 15px;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf; }
+  .union-input-style .union-img-style {
+    max-height: 25px;
+    max-width: 25px;
+    margin-left: 170px; }
+
+.paypal-input-style {
+  padding: 15px;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf; }
+  .paypal-input-style .paypal-img-style {
+    max-height: 25px;
+    max-width: 25px;
+    margin-left: 193px; }
+
+.shipping-handling-container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 70px;
+  margin-bottom: 50px; }
+  .shipping-handling-container .shipping-handling-title {
+    font-family: "Muli", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 3px; }
+
+.shipping-method-container {
+  display: flex;
+  width: 65%;
+  width: 65%;
+  border: #dfdfdf solid 1.7px;
+  background: #F7f7f7;
+  padding: 25px;
+  margin-bottom: 50px; }
+  .shipping-method-container .shipping-text-style {
+    font-family: "Taviraj", serif;
+    font-size: 14px;
+    margin-left: 15px;
+    line-height: 15px; }
+  .shipping-method-container .ups-img-style {
+    max-width: 60px;
+    max-height: 60px;
+    margin-left: 250px; }
+
+.main-summary-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 53%; }
+  .main-summary-wrapper .order-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 190px;
+    height: 130px;
+    width: 100%;
+    background: #FFF;
+    border-top: solid 1px #DDD;
+    border-bottom: solid 1px #DDD;
+    font-family: "Taviraj", serif;
+    font-size: 18px;
+    color: #4F4F4F; }
+  .main-summary-wrapper .selected-watch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .main-summary-wrapper .summary-shipping {
+    display: flex;
+    justify-content: space-between; }
+  .main-summary-wrapper .holiday-discount {
+    display: flex;
+    justify-content: space-between; }
+  .main-summary-wrapper .grand-total {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between; }
 
 .main-checkout-wrapper {
   width: 100%; }
@@ -621,7 +839,7 @@
     height: 125px;
     display: flex;
     justify-content: center; }
-    .main-checkout-wrapper .checkout-nav-container #checkout-logo-img {
+    .main-checkout-wrapper .checkout-nav-container #dw-logo-img {
       padding-top: 20px;
       width: 154px;
       height: 62px; }
@@ -690,15 +908,15 @@
     display: flex;
     background: #F4F4F4;
     margin-top: 52px;
-    margin: 0px auto; }
+    margin: 51px auto 0px; }
     .main-checkout-wrapper .checkout-results-wrapper .checkout-results-img-container {
       display: flex;
       justify-content: center;
       height: 100%;
       margin: 0px 30px; }
       .main-checkout-wrapper .checkout-results-wrapper .checkout-results-img-container img {
-        max-width: 100%;
-        max-height: 100%; }
+        max-width: 114%;
+        max-height: 115%; }
     .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper {
       display: flex;
       flex-direction: column;
@@ -727,7 +945,8 @@
           font-size: 16px;
           color: #787878;
           text-transform: uppercase;
-          font-weight: 400; }
+          font-weight: 400;
+          margin-left: 30px; }
         .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details .checkout-size {
           font-family: "Muli", sans-serif;
           font-size: 16px;
@@ -746,6 +965,42 @@
           color: #787878;
           text-transform: uppercase;
           font-weight: 400; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details #gold-circle {
+          background-color: #D8CBA1;
+          width: 22px;
+          height: 22px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details #checkout-subtract {
+          position: relative;
+          margin-left: -155px;
+          background-color: lightgray;
+          width: 17px;
+          height: 17px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em; }
+        .main-checkout-wrapper .checkout-results-wrapper .checkout-detail-wrapper .checkout-watch-details #checkout-add {
+          position: relative;
+          margin-right: -155px;
+          background-color: lightgray;
+          width: 17px;
+          height: 17px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 100;
+          color: #FFF;
+          text-align: center;
+          font-size: 1em; }
   .main-checkout-wrapper .checkout-addmore-wrapper {
     display: flex;
     flex-direction: column;
@@ -767,3 +1022,415 @@
   .main-checkout-wrapper .checkout-middle-line {
     border-top: #C8C8C8 solid 1px;
     margin-top: 110px; }
+
+.main-detail-wrapper {
+  width: 100%; }
+  .main-detail-wrapper .watch-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4f4f4f; }
+    .main-detail-wrapper .watch-title #watch-size {
+      margin-top: 30px;
+      font-family: "Muli", sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 3px; }
+    .main-detail-wrapper .watch-title #selected-watch {
+      font-family: "Muli", sans-serif;
+      font-size: 50px;
+      font-weight: lighter;
+      letter-spacing: 5px;
+      margin-top: 14px; }
+  .main-detail-wrapper .details-carousel-container {
+    margin: 30px auto 40px 175px;
+    width: 80%; }
+  .main-detail-wrapper .watch-attribute-wrapper {
+    width: 100%;
+    height: 82px;
+    margin-top: -68px; }
+    .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container {
+      display: flex;
+      justify-content: center; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-size {
+        width: 157px;
+        height: 54px;
+        background: #FFF;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: #F4F4F4;
+        font-size: 15px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color {
+        width: 157px;
+        height: 54px;
+        background: #FFF;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif;
+        display: flex;
+        text-align: center;
+        color: #4F4F4F;
+        text-transform: uppercase;
+        font-size: 14px;
+        border: #4F4F4F solid .7px;
+        cursor: pointer; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-gold-color:hover {
+        color: #4F4F4F;
+        border: #4F4F4F solid .7px;
+        cursor: pointer; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container #gold-circle {
+        margin-top: 16px;
+        margin-left: 10px;
+        background-color: #D8CBA1;
+        width: 22px;
+        height: 22px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        cursor: pointer; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container #gold-style {
+        margin-top: 21px;
+        margin-left: 8px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-silver-color:hover {
+        color: #4F4F4F;
+        border: #4F4F4F solid .7px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-silver-color {
+        width: 157px;
+        height: 54px;
+        background: #FFF;
+        margin-left: 20px;
+        font-family: "Muli", sans-serif;
+        display: flex;
+        text-align: center;
+        color: #AFAFAF;
+        text-transform: uppercase;
+        font-size: 14px;
+        border: #AFAFAF solid .7px;
+        cursor: pointer; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container #silver-circle {
+        margin-top: 16px;
+        margin-left: 35px;
+        background-color: #d0d0d0;
+        width: 22px;
+        height: 22px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        cursor: pointer; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container #silver-style {
+        margin-top: 21px;
+        margin-left: 8px; }
+      .main-detail-wrapper .watch-attribute-wrapper .watch-attribute-container .attribute-shopnow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 56px;
+        width: 288px;
+        margin-left: 16%;
+        background: #479E7A;
+        text-align: center;
+        font-family: "Muli", sans-serif;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        word-spacing: 3px;
+        font-weight: bold;
+        cursor: pointer; }
+  .main-detail-wrapper .watch-details-container {
+    width: 100%; }
+  .main-detail-wrapper .watch-description {
+    width: 80%;
+    margin: 62px auto 0px;
+    font-family: "Taviraj", serif;
+    font-size: 24px;
+    line-height: 34px;
+    text-indent: 30px; }
+  .main-detail-wrapper .details-for-watch {
+    margin-bottom: 100px; }
+    .main-detail-wrapper .details-for-watch .details-container {
+      background: #F4F4F4;
+      width: 80%;
+      height: 280px;
+      margin: 60px auto 0px; }
+      .main-detail-wrapper .details-for-watch .details-container .details-title {
+        font-family: "Muli", sans-serif;
+        color: #525252;
+        text-transform: uppercase;
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: 3px;
+        padding: 50px 0px 35px 0px;
+        margin-right: 30px; }
+      .main-detail-wrapper .details-for-watch .details-container table {
+        display: inline-block;
+        border-collapse: collapse;
+        height: 56%;
+        color: #787878;
+        font-family: "Muli", sans-serif;
+        text-transform: uppercase;
+        mso-cellspacing: 10px;
+        margin-left: 48px; }
+        .main-detail-wrapper .details-for-watch .details-container table tr {
+          border-top: 1px solid #DADADA; }
+          .main-detail-wrapper .details-for-watch .details-container table tr .table-data-style {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 5px;
+            height: 25px; }
+      .main-detail-wrapper .details-for-watch .details-container .details-table-right {
+        width: 45%; }
+  .main-detail-wrapper .inspiration-wrapper {
+    width: 100%;
+    text-align: center;
+    font-family: "Muli", sans-serif;
+    text-transform: uppercase; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-title {
+      font-size: 55px;
+      line-height: 65px;
+      color: #4f4f4f;
+      font-weight: lighter;
+      letter-spacing: 7px; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-subtitle {
+      font-size: 25px;
+      line-height: 29px;
+      color: #AAA;
+      letter-spacing: 8.5px;
+      word-spacing: 3.5px; }
+    .main-detail-wrapper .inspiration-wrapper .inspiration-bottom-line {
+      width: 92px;
+      height: 1px;
+      background: #4f4f4f;
+      margin: 18px auto; }
+  .main-detail-wrapper .inspiration-carousel-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+    .main-detail-wrapper .inspiration-carousel-wrapper img {
+      height: 440px;
+      width: 440px; }
+  .main-detail-wrapper .perfect-match-cuff-wrapper {
+    width: 100%;
+    height: 288px;
+    display: flex;
+    justify-content: center; }
+    .main-detail-wrapper .perfect-match-cuff-wrapper .perfect-match-container {
+      width: 80%;
+      display: flex;
+      justify-content: space-between; }
+      .main-detail-wrapper .perfect-match-cuff-wrapper .perfect-match-container .cuff-text .perfect-match-title {
+        text-align: center;
+        font-family: "Muli", sans-serif;
+        font-size: 28px;
+        color: #4F4F4F;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: lighter;
+        margin-bottom: 10px; }
+      .main-detail-wrapper .perfect-match-cuff-wrapper .perfect-match-container .cuff-text .cuff-details {
+        font-family: "Taviraj", serif;
+        font-size: 18px;
+        color: #4f4f4f;
+        text-align: center;
+        margin-bottom: 10px;
+        line-height: 23px; }
+      .main-detail-wrapper .perfect-match-cuff-wrapper .perfect-match-container .cuff-text .cuff-link {
+        font-family: "Taviraj", serif;
+        font-style: italic;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 17px;
+        color: #4e5874;
+        cursor: pointer; }
+      .main-detail-wrapper .perfect-match-cuff-wrapper .perfect-match-container .cuff-text .cuff-link:hover {
+        text-decoration: none; }
+    .main-detail-wrapper .perfect-match-cuff-wrapper .nato-img {
+      height: 217px;
+      width: 400px; }
+    .main-detail-wrapper .perfect-match-cuff-wrapper img {
+      height: 176px;
+      width: 400px; }
+  .main-detail-wrapper .simplistic-dial-container {
+    width: 100%;
+    height: 395px;
+    background: url("https://asset1.danielwellington.com/media/wysiwyg/Widgets/simplistic2.png") no-repeat;
+    background-color: #000; }
+    .main-detail-wrapper .simplistic-dial-container .simple-title-centering {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .main-detail-wrapper .simplistic-dial-container .simple-title-centering .simple-title {
+        margin-top: 105px;
+        padding-bottom: 15px;
+        color: #FFF;
+        font-weight: lighter;
+        font-size: 42px;
+        font-family: "Muli", sans-serif;
+        line-height: 50px;
+        text-transform: uppercase;
+        text-align: right;
+        margin-right: 250px; }
+      .main-detail-wrapper .simplistic-dial-container .simple-title-centering .simple-title-line {
+        margin-left: 67%;
+        height: 1px;
+        background: #FFF;
+        width: 100px; }
+    .main-detail-wrapper .simplistic-dial-container .simple-title-details-centering {
+      margin-top: 50px;
+      display: flex;
+      justify-content: flex-end;
+      text-align: center;
+      color: #FFF;
+      font-family: "Taviraj", serif;
+      font-size: 23px;
+      font-style: italic;
+      font-weight: lighter;
+      margin-right: 180px; }
+  .main-detail-wrapper .ultra-thin-container {
+    width: 100%;
+    height: 368px;
+    display: flex;
+    justify-content: space-between; }
+    .main-detail-wrapper .ultra-thin-container .ultra-thin-centering {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-left: 200px; }
+      .main-detail-wrapper .ultra-thin-container .ultra-thin-centering .ultra-thin-title {
+        font-family: "Muli", sans-serif;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        color: #4F4F4F;
+        text-transform: uppercase; }
+      .main-detail-wrapper .ultra-thin-container .ultra-thin-centering .ultra-thin-title-detail {
+        font-family: "Taviraj", serif;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F4F4F;
+        margin-top: 10px; }
+    .main-detail-wrapper .ultra-thin-container .small-details {
+      font-family: "Taviraj", serif;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 22px;
+      color: #AAA;
+      margin-left: 80px; }
+    .main-detail-wrapper .ultra-thin-container img {
+      width: 400px;
+      height: 204px;
+      margin-top: 45px;
+      margin-right: 100px; }
+  .main-detail-wrapper .flagship-container {
+    display: flex;
+    width: 100%;
+    height: 579px;
+    background: url("../../assets/img/randoms/new-york-cab.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .main-detail-wrapper .flagship-container .flagship-img-style {
+      position: absolute;
+      width: 415px;
+      margin-left: 215px; }
+    .main-detail-wrapper .flagship-container .flagship-text-style {
+      width: 465px;
+      margin-left: 57%;
+      text-align: center;
+      color: #FFF;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-title {
+        font-family: "Muli", sans-serif;
+        font-size: 42px;
+        font-weight: lighter;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 3px; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-line {
+        height: 1px;
+        background: #FFF;
+        width: 100px;
+        margin: 0px auto;
+        margin-top: 10px; }
+      .main-detail-wrapper .flagship-container .flagship-text-style .flagship-title-details {
+        font-family: "Taviraj", serif;
+        font-style: italic;
+        font-size: 21px;
+        font-weight: lighter;
+        line-height: 23px;
+        margin-top: 40px; }
+  .main-detail-wrapper .two-size-container {
+    width: 100%;
+    height: 552px;
+    display: flex;
+    justify-content: space-between; }
+    .main-detail-wrapper .two-size-container .two-size-img {
+      width: 399px;
+      height: 380px;
+      margin-left: 250px;
+      margin-top: 100px; }
+    .main-detail-wrapper .two-size-container .two-size-text {
+      width: 525px;
+      margin-top: 205px;
+      margin-right: 190px; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-title {
+        font-family: "Muli", sans-serif;
+        font-size: 24px;
+        font-weight: lighter;
+        line-height: 28px;
+        letter-spacing: 4px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: #4F4F4F;
+        text-align: center; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-title-details {
+        font-family: "Taviraj", serif;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F4F4F;
+        margin-bottom: 15px; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-link {
+        font-family: "Taviraj", serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 31px;
+        color: #4F4F4F;
+        text-align: center;
+        text-decoration: underline; }
+      .main-detail-wrapper .two-size-container .two-size-text .two-size-link:hover {
+        text-decoration: none;
+        cursor: pointer; }
+
+.newsletter-wrapper {
+  width: 100%;
+  height: 324px;
+  display: flex;
+  justify-content: center; }
+  .newsletter-wrapper .newsletter-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .newsletter-wrapper .newsletter-container .newsletter-title {
+      font-family: "Muli", sans-serif;
+      font-weight: lighter;
+      font-size: 54px;
+      line-height: 64px;
+      color: #4F4F4F;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 5px; }
+    .newsletter-wrapper .newsletter-container .newsletter-line {
+      margin: 10px auto;
+      height: 1px;
+      width: 100px;
+      background: #AAA; }
+    .newsletter-wrapper .newsletter-container .verifiction1 {
+      font-family: "Taviraj", serif;
+      font-size: 16px;
+      line-height: 40px;
+      color: #4F4F4F;
+      text-align: center;
+      margin-bottom: 10px; }

@@ -1,0 +1,152 @@
+<section class="main-forum-wrapper">
+    <section class="forum-title-centering">
+    <section class="forum-title1-container">
+     <p class="customer-info-title">your information</p>
+        <span class="title-line-left"></span>
+    </section>
+    <section class="forum-title2-container">
+        <p class="summary-title">summary</p>
+        <br>
+        <aside class="line-center">
+         <span id="summary-line"></span>
+        </aside>
+    </section>
+
+    </section>
+
+<section class="forum-fillout-wrapper">
+    <aside class="customer-info-fillout-container">
+<!--input for email address-->
+        <section class="email-wrap">
+            <p class="email-title">email address</p>
+            <input id="email-info" type="email"
+                   ng-model="string"
+                   [name="string"]
+                   [required="string"]
+                   [ng-required="string"]
+                   [ng-minlength="number"]
+                   [ng-maxlength="number"]
+                   [pattern="string"]
+                   [ng-pattern="string"]
+                   [ng-change="string"]>
+        </section>
+<!--input for first and last name-->
+        <section class="name-wrap">
+        <section class="first-and-last-wrap">
+            <p class="first-name">first name</p>
+            <p class="last-name">last name</p>
+        </section>
+
+        <section class="fist-last-input-container">
+            <input id="input-first" type="text">
+            <input id="input-last" type="text">
+        </section>
+        </section>
+<!--input for company name-->
+        <section class="company-wrap">
+            <p class="company-title">company</p>
+            <input  id="company-input" type="text">
+        </section>
+<!--input for telephone number-->
+        <section class="telephone-wrap">
+            <p class="telephone-title">telephone (add '+' before the country code</p>
+            <input  id="telephone-input" type="text">
+        </section>
+<!--input for street address-->
+        <section class="address-wrap">
+            <p class="address-title">company</p>
+            <input  id="address-input" type="text">
+        </section>
+<!--input city and zip code-->
+        <section class="city-zip-wrap">
+            <section class="city-and-zip-wrap">
+                <p class="city-input">city</p>
+                <p class="zip-input">zip/postal code</p>
+            </section>
+
+            <section class="city-zip-input-container">
+                <input id="input-city" type="text">
+                <input id="input-zip" type="text">
+            </section>
+        </section>
+
+        <!--<section class="state-selection">-->
+            <!--<select ng-model="myState" ng-options="state.state for state in states"></select>-->
+        <!--</section>-->
+<!--input state-->
+        <section class="state-wrap">
+            <p class="state-title">state/providence</p>
+            <input id="state-input" type="text">
+        </section>
+<!--input country-->
+        <section class="country-wrap">
+            <p class="country-title">country</p>
+            <input id="country-input" type="text">
+        </section>
+<!--input delivery address-->
+        <section class="delivery-address">
+            <input type="checkbox" id="checkbox-style">
+            <label class="delivery-font-style">Use different delivery address</label>
+        </section>
+<!--select payment method-->
+        <section class="forum-payment-options">
+            <p class="payment-options-title">payment options</p>
+        </section>
+
+        <section class="payment-radio-container">
+        <form name="paymentOptions">
+
+            <aside class="credit-input-style">
+                <input type="radio" value="creditCard">
+                <label class="payment-style">Credit Card</label>
+                <img src="../../../assets/img/payments/credit/jcb_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/sm_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/ae_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/dc_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/di_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/mc_small.png" class="credit-img-style">
+                <img src="../../../assets/img/payments/credit/vi_small.png" class="credit-img-style">
+            </aside>
+
+            <aside class="union-input-style">
+                <input type="radio" value="unionPay">
+                <label class="payment-style">UnionPay</label>
+                <img src="../../../assets/img/payments/union/unionpay.png" class="union-img-style">
+            </aside>
+
+            <aside class="paypal-input-style">
+                <input type="radio" value="payPal">
+                <label class="payment-style">PayPal</label>
+                <img src="../../../assets/img/payments/paypal/paypal.png" class="paypal-img-style">
+            </aside>
+        </form>
+        </section>
+
+<!--select shipping method-->
+        <section class="shipping-handling-container">
+            <p class="shipping-handling-title">shipping and handling</p>
+        </section>
+
+        <aside class="shipping-method-container">
+            <input type="radio" checked>
+            <label class="shipping-text-style">UPS Express (+ $0) <br><br>
+                UPS Express 2-3 working days</label>
+            <img src="../../../assets/img/payments/UPS_logo_2003.png" class="ups-img-style">
+        </aside>
+    </aside>
+
+
+    <!-- THIS IS WHERE THE RIGHT SIDE SUMMARY STARTS!-->
+    <section class="main-summary-wrapper" ng-repeat="items in cart">
+        <aside class="order-summary-container">
+            <aside class="selected-watch">{{qty}}x {{items.category}} {{items.name}} {{items.size}} <p class="selected-pricing">{{items.price * qty | currency}}</p></aside>
+            <aside class="summary-shipping">Shipping & Handling (UPS Express)<p>$0</p></aside>
+            <aside class="holiday-discount">Discount (10% Holiday Offer) <p>{{(items.price * qty) * (.1) | currency}}</p></aside>
+            <aside class="grand-total">grand total<p>{{(items.price) - ((qty * items.price) * (.1)) | currency}}</p></aside>
+        </aside>
+    </section>
+
+
+
+
+

@@ -1,7 +1,18 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var massive = require('massive');
+var sendgrid = require('../sendgrid');
+
 var port = 3030;
+
+////////// Send Grid
+var helper = require('sendgrid').mail;
+var from_email = new helper.Email('danielwellington@onlinestore.com');
+var to_email = new helper.Email('dallin.r.parker@gmail.com');
+var subject = 'Thank You For Your Order!';
+var content = new helper.Content('text/plain', 'Hello, Dallin! thank you for your order');
+var mail = new helper.Mail(from_email, subject, to_email, content);
+/////////
 
 var app = express();
 module.exports = app;
@@ -30,10 +41,6 @@ app.get('/api/classic', dbCtrl.getClassic);
 app.get('/api/blkclassic', dbCtrl.getBlkClassic);
 app.get('/api/dapclassic', dbCtrl.getDapClassic);
 // ======  update methods
-
-
-
-
 
 
 

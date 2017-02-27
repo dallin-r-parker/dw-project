@@ -1,0 +1,421 @@
+.main-detail-wrapper {
+  width:100%;
+
+  .watch-title {
+    text-align: center;
+    text-transform: uppercase;
+    color:$detail-titlecolor;
+
+    #watch-size {
+      margin-top:30px;
+      font-family:$primary-font;
+      font-size:$watch-size-fontsize;
+      font-weight:$watch-size-fontweight;
+      letter-spacing: 3px;
+    }
+    #selected-watch {
+      font-family:$primary-font;
+      font-size: $selected-watch-fontsize;
+      font-weight:lighter;
+      letter-spacing: 5px;
+      margin-top:14px;
+    }
+  }
+
+  .details-carousel-container {
+    margin:30px auto 40px 175px;
+    width:80%;
+  }
+
+.watch-attribute-wrapper {
+  width:100%;
+  height: 82px;
+  margin-top:-68px;
+  .watch-attribute-container {
+    display: flex;
+    justify-content:center;
+
+    .attribute-size {
+      @include attribute-style;
+      @include attribute-specific-style;
+    }
+    .attribute-gold-color{
+      @include attribute-style;
+      @include attribute-gold-style;
+      cursor: pointer;
+    }
+
+    .attribute-gold-color:hover {
+      color: #4F4F4F;
+      border: #4F4F4F solid .7px;
+      cursor: pointer;
+    }
+    #gold-circle {@include gold-circle}
+    #gold-style {
+      margin-top:21px;
+      margin-left:8px;
+    }
+
+    .attribute-silver-color:hover{
+      color: #4F4F4F;
+      border: #4F4F4F solid .7px;
+    }
+
+    .attribute-silver-color{
+      @include attribute-style;
+      @include attribute-silver-style;
+      cursor: pointer;
+    }
+    #silver-circle{@include silver-circle}
+    #silver-style{
+      margin-top:21px;
+      margin-left:8px;
+    }
+
+
+    .attribute-shopnow{@include attribute-shopnow}
+    .attribute-shopnow{}
+  }
+
+}
+  
+  .watch-details-container {
+    width:100%;
+  }
+  .watch-description {
+    width:80%;
+    margin:62px auto 0px;
+    font-family:$logo-font;
+    font-size:24px;
+    line-height:34px;
+    text-indent: 30px;
+  }
+
+  .details-for-watch {
+    //width:100%;
+    margin-bottom:100px;
+
+    .details-container {
+      background:$footer-off-white;
+      width:80%;
+      height:280px;
+      margin:60px auto 0px;
+
+
+      .details-title {@include detail-title-style}
+
+
+      table{
+        display: inline-block;
+        //display: flex;
+        //justify-content: space-around;
+        border-collapse: collapse;
+        height:56%;
+        color: #787878;
+        font-family:$primary-font;
+        //margin-left:20px;
+        text-transform: uppercase;
+        mso-cellspacing: 10px;
+        margin-left: 48px;
+        //width:100%;
+        tr {
+          //width: 100%;
+          border-top: 1px solid #DADADA;
+          .table-data-style {
+            //width: 100%;
+            display: flex;
+            justify-content:flex-end;
+            margin-right: 5px;
+            height:25px;
+          }
+
+        }
+     }
+      .details-table-left{
+      }
+.details-table-right{
+  width: 45%;
+  //margin-left:100px;
+}
+    }
+
+  }
+
+  //.details-table-right{
+  //  display: flex;
+  //}
+
+  .inspiration-wrapper {
+    width:100%;
+    text-align: center;
+    font-family:$primary-font;
+    text-transform: uppercase;
+
+    .inspiration-title {
+      font-size:55px;
+      line-height:65px;
+      color: $detail-titlecolor;
+      font-weight:lighter;
+      letter-spacing:7px;
+    }
+    .inspiration-subtitle {
+      font-size: 25px;
+      line-height:29px;
+      color: #AAA;
+      letter-spacing:8.5px;
+      word-spacing:3.5px;
+    }
+    .inspiration-bottom-line {
+      width: 92px;
+      height: 1px;
+      background: $detail-titlecolor;
+      margin:18px auto;
+    }
+
+  }
+
+  .inspiration-carousel-wrapper{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    img{
+      height:440px;
+      width: 440px;
+    }
+  }
+
+  .perfect-match-cuff-wrapper{
+    width:100%;
+    height: 288px;
+    display: flex;
+    justify-content:center;
+    .perfect-match-container{
+      width: 80%;
+      display: flex;
+      justify-content:space-between;
+      .cuff-text {
+        .perfect-match-title {
+          text-align: center;
+          font-family: $primary-font;
+          font-size: 28px;
+          color: #4F4F4F;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: lighter;
+          margin-bottom:10px;
+        }
+        .cuff-details{
+          font-family:$logo-font;
+          font-size:18px;
+          color: #4f4f4f;
+          text-align: center;
+          margin-bottom:10px;
+          line-height:23px;
+        }
+        .cuff-link{
+          font-family:$logo-font;
+          font-style: italic;
+          text-decoration: underline;
+          text-align: center;
+          font-size:17px;
+          color: #4e5874;
+          cursor: pointer;
+        }
+        .cuff-link:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .nato-img{
+      height:217px;
+      width:400px;
+    }
+    img {
+      height:176px;
+      width:400px;
+    }
+  }
+
+  .simplistic-dial-container {
+    width: 100%;
+    height: 395px;
+    background: url("https://asset1.danielwellington.com/media/wysiwyg/Widgets/simplistic2.png") no-repeat;
+    background-color: #000;
+    .simple-title-centering{
+      display: flex;
+      justify-content:center;
+      flex-direction:column;
+    .simple-title {
+      margin-top: 105px;
+      padding-bottom: 15px;
+      color: #FFF;
+      font-weight:lighter;
+      font-size: 42px;
+      font-family: $primary-font;
+      line-height: 50px;
+      text-transform: uppercase;
+      text-align: right;
+      margin-right: 250px;
+    }
+    .simple-title-line {
+      margin-left: 67%;
+      height: 1px;
+      background: #FFF;
+      width: 100px;
+    }
+  }
+  .simple-title-details-centering{
+    margin-top:50px;
+    display: flex;
+    justify-content:flex-end;
+    text-align: center;
+    color: #FFF;
+    font-family:$logo-font;
+    font-size: 23px;
+    font-style: italic;
+    font-weight:lighter;
+    margin-right:180px;
+    }
+  }
+
+  .ultra-thin-container{
+    width:100%;
+    height: 368px;
+    display: flex;
+    justify-content:space-between;
+    .ultra-thin-centering{
+      display: flex;
+      justify-content:center;
+      flex-direction:column;
+      text-align: center;
+      margin-left:200px;
+      .ultra-thin-title{
+        font-family:$primary-font;
+        font-size: 28px;
+        line-height:33px;
+        letter-spacing:3px;
+        font-weight:lighter;
+        color: #4F4F4F;
+        text-transform: uppercase;
+      }
+      .ultra-thin-title-detail {
+        font-family: $logo-font;
+        font-size: 16px;
+        line-height:25px;
+        color: #4F4F4F;
+        margin-top:10px;
+      }
+    }
+    .small-details{
+      font-family: $logo-font;
+      font-size: 14px;
+      font-style: italic;
+      line-height:22px;
+      color: #AAA;
+      margin-left:80px;
+    }
+    img {
+      width:400px;
+      height:204px;
+      margin-top:45px;
+      margin-right:100px;
+    }
+  }
+
+  .flagship-container{
+    display: flex;
+    width: 100%;
+    height: 579px;
+    background: url("../../assets/img/randoms/new-york-cab.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    .flagship-img-style{
+      position: absolute;
+      width:415px;
+      margin-left:215px;
+    }
+    .flagship-text-style{
+      width:465px;
+      margin-left:57%;
+      text-align: center;
+      color: #FFF;
+      display: flex;
+      justify-content:center;
+      flex-direction:column;
+      .flagship-title{
+        font-family:$primary-font;
+        font-size: 42px;
+        font-weight:lighter;
+        line-height:50px;
+        text-transform: uppercase;
+        letter-spacing:3px;
+      }
+      .flagship-line{
+        height:1px;
+        background: #FFF;
+        width:100px;
+        margin:0px auto;
+        margin-top:10px;
+      }
+      .flagship-title-details{
+        font-family:$logo-font;
+        font-style: italic;
+        font-size: 21px;
+        font-weight:lighter;
+        line-height:23px;
+        margin-top:40px;
+      }
+    }
+  }
+
+  .two-size-container{
+    width:100%;
+    height:552px;
+    display: flex;
+    justify-content:space-between;
+
+    .two-size-img{
+      width:399px;
+      height:380px;
+      margin-left:250px;
+      margin-top:100px;
+    }
+    .two-size-text{
+      width:525px;
+      margin-top:205px;
+      margin-right:190px;
+      .two-size-title{
+        font-family:$primary-font;
+        font-size: 24px;
+        font-weight:lighter;
+        line-height:28px;
+        letter-spacing:4px;
+        margin-bottom:15px;
+        text-transform: uppercase;
+        color: #4F4F4F;
+        text-align: center;
+      }
+      .two-size-title-details{
+        font-family:$logo-font;
+        font-size: 16px;
+        line-height:25px;
+        color: #4F4F4F;
+        margin-bottom:15px;
+      }
+      .two-size-link{
+        font-family:$logo-font;
+        font-style: italic;
+        font-size:20px;
+        line-height:31px;
+        color: #4F4F4F;
+        text-align: center;
+        text-decoration: underline;
+      }
+      .two-size-link:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+  }
+} //<--- end of main-detail-wrapper
