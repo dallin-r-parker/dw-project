@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var bodyParser = require('body-parser');
 var massive = require('massive');
@@ -5,14 +6,6 @@ var sendgrid = require('../sendgrid');
 
 var port = 3030;
 
-////////// Send Grid
-var helper = require('sendgrid').mail;
-var from_email = new helper.Email('danielwellington@onlinestore.com');
-var to_email = new helper.Email('dallin.r.parker@gmail.com');
-var subject = 'Thank You For Your Order!';
-var content = new helper.Content('text/plain', 'Hello, Dallin! thank you for your order');
-var mail = new helper.Mail(from_email, subject, to_email, content);
-/////////
 
 var app = express();
 module.exports = app;
@@ -20,7 +13,10 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + './../public'))
 
 // MASSIVE //
-var massiveUri = 'postgres://localhost/dw_products';
+// var massiveUri = 'postgres://srzdbsaf:RAFoSICBH1kFOZ6F-9cSNDwfQ7pdJHyx@babar.elephantsql.com:5432/srzdbsaf';
+var massiveUri = process.env.DATABASE_URL
+console.log(process.env)
+// url = ENV["DATABASE_URL"]
 var massiveServer = massive.connectSync({
     connectionString: massiveUri
 });
