@@ -1,7 +1,7 @@
 angular.module('dw-store').service('checkoutService', function($http) {
 
 
-     this.checkoutItems = [];
+    this.checkoutItems = [];
     var self = this;
     // console.log(self.checkoutItems);
     //

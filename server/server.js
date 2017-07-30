@@ -1,30 +1,26 @@
 require('dotenv').config()
-var express = require('express');
-var bodyParser = require('body-parser');
-var massive = require('massive');
-var sendgrid = require('../sendgrid');
-
-var port = 3030;
+const express = require('express');
+const bodyParser = require('body-parser');
+const massive = require('massive');
+const sendgrid = require('../sendgrid');
 
 
-var app = express();
-module.exports = app;
+const app = module.exports = express();
+app.set('port', process.env.PORT || 3030)
 app.use(bodyParser.json());
 app.use(express.static(__dirname + './../public'))
 
 // MASSIVE //
-// var massiveUri = 'postgres://srzdbsaf:RAFoSICBH1kFOZ6F-9cSNDwfQ7pdJHyx@babar.elephantsql.com:5432/srzdbsaf';
-var massiveUri = process.env.DATABASE_URL
-console.log(process.env)
-// url = ENV["DATABASE_URL"]
-var massiveServer = massive.connectSync({
+// const massiveUri = 'postgres://srzdbsaf:RAFoSICBH1kFOZ6F-9cSNDwfQ7pdJHyx@babar.elephantsql.com:5432/srzdbsaf';
+const massiveUri = "postgres://yhskvjpjuswifs:b586792a5ee880b54abe08f7dacf88131dbbc2a0b2c14a08ed9695aea8e1aa40@ec2-23-21-224-199.compute-1.amazonaws.com:5432/dem051v1g3khma?ssl=true"
+const massiveServer = massive.connectSync({
     connectionString: massiveUri
 });
 
 app.set('db', massiveServer);
-var db = app.get('db');
+const db = app.get('db');
 // ===== connect database
-var dbCtrl = require('./dbCtrl');
+const dbCtrl = require('./dbCtrl');
 
 
 // =========  post methods
@@ -43,6 +39,7 @@ app.get('/api/dapclassic', dbCtrl.getDapClassic);
 
 
 
-app.listen(port, function(){
-    console.log('Successfully Listening on: ' + port);
+
+app.listen(app.get('port'), () => {
+	console.log('listening on: ', app.get('port'))
 })

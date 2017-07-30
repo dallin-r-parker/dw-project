@@ -22,4 +22,4 @@ angular.module('dw-store', ['ui.router', 'slick', 'sticky'])
                 url:'/newsletter',
             })
 
-    })
+    });

@@ -3,7 +3,7 @@
 
         <aside class="row1" ng-repeat="watch in blkclassics" ng-show="$index < showMeBlk">
             <h1 class="top-watch-style">{{watch.category}} | {{watch.size}}</h1>
-            <img ng-src="{{watch.gold_img}}" ng-hide="showme0" ui-sref="details({id: {{watch.id_primary_key}}})" alt="{{watch.category}} {{watch.name}} Watch {{watch.size}}" class="watch-size">
+            <img ng-src="{{watch.gold_img}}" ng-hide="showme0" ui-sref="details({id: {{watch.id_primary_key}})" alt="{{watch.category}} {{watch.name}} Watch {{watch.size}}" class="watch-size">
             <img ng-src="{{watch.silver_img}}" ng-show="showme0" ui-sref="details({id: {{watch.id_primary_key}}})"alt="{{watch.category}} {{watch.name}} Watch {{watch.size}}" class="watch-size">
             <p class="bottom-watch-style">Classic {{watch.name}} <span class="watch-price-style"> ${{watch.price}}</span></p>
             <section class="center-color-wrapper">
