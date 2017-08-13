@@ -178,16 +178,6 @@ angular.module('dw-store').service('sendGridService', function ($http) {
 });
 'use strict';
 
-angular.module('dw-store').directive('blkClassicHeroDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('blkClassicWatchCtrl', function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -232,6 +222,16 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
             //     $(this).toggle({"box-shadow": "inset 0 0 0 4px #fff,0 0 0 2px #464646"})
             // })
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('blkClassicHeroDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/blkClassicHero/blk-classic-hero-tmpl.html'
     };
 });
 //restrict with A,E, or AE

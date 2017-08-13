@@ -129,20 +129,17 @@
           font-family:$primary-font;
           text-transform: uppercase;
           background: $footer-off-white;
-          //background-image: url("../../../assets/img/flags/usa-flag.png");
-          //background-repeat: no-repeat;
-          //background-position: center;
           margin-top:25px;
           text-align: center;
 
         }
 
       }
-      .shipping-partners{@include footer-shipping-content-style
+      .shipping-partners{@include footer-shipping-content-style;
         img {@include shipping-payment-img-style}
       }
 
-      .payment-partners{@include footer-shipping-content-style
+      .payment-partners{@include footer-shipping-content-style;
           img {@include shipping-payment-img-style}
       }
     }
