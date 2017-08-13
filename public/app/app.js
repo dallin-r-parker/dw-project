@@ -1,4 +1,4 @@
-angular.module('dw-store', ['ui.router', 'slick', 'sticky'])
+angular.module('dw-store', ['ui.router', 'slick'])
     .config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
