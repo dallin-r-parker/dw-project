@@ -1024,6 +1024,7 @@
     margin-top: 110px; }
 
 .main-detail-wrapper {
+  overflow: hidden;
   width: 100%; }
   .main-detail-wrapper .watch-title {
     text-align: center;
@@ -1151,7 +1152,7 @@
     margin-bottom: 100px; }
     .main-detail-wrapper .details-for-watch .details-container {
       background: #F4F4F4;
-      width: 80%;
+      width: 60%;
       height: 280px;
       margin: 60px auto 0px; }
       .main-detail-wrapper .details-for-watch .details-container .details-title {
@@ -1161,8 +1162,7 @@
         font-size: 28px;
         text-align: center;
         letter-spacing: 3px;
-        padding: 50px 0px 35px 0px;
-        margin-right: 30px; }
+        padding-top: 50px;}
       .main-detail-wrapper .details-for-watch .details-container table {
         display: inline-block;
         border-collapse: collapse;

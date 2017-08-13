@@ -188,16 +188,6 @@ angular.module('dw-store').directive('blkClassicHeroDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('bottomDescriptionDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('blkClassicWatchCtrl', function ($scope, mainService) {
 
     $scope.getBlkClassic = function () {
@@ -247,12 +237,11 @@ angular.module('dw-store').directive('blkClassicWatchDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').directive('checkoutItemDir', function () {
+angular.module('dw-store').directive('bottomDescriptionDir', function () {
 
     return {
         restrict: 'E',
-        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
-        controller: 'checkoutCtrl'
+        templateUrl: 'app/directives/bottomDescription/bottom-description-tmpl.html'
     };
 });
 //restrict with A,E, or AE
@@ -266,6 +255,17 @@ angular.module('dw-store').directive('classicHeroDir', function () {
         restrict: 'E',
         templateUrl: 'app/directives/classicHero/classic-hero-tmpl.html',
         controller: 'classicHeroCtrl'
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').directive('checkoutItemDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/checkoutItem/checkout-item-tmpl.html',
+        controller: 'checkoutCtrl'
     };
 });
 //restrict with A,E, or AE
@@ -379,24 +379,6 @@ angular.module('dw-store').directive('detailsCarouselDir', function () {
 //restrict with A,E, or AE
 'use strict';
 
-angular.module('dw-store').controller('footerCtrl', function ($scope) {
-
-    $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
-    $scope.myCountry = $scope.countries[0];
-});
-'use strict';
-
-angular.module('dw-store').directive('footerDir', function () {
-
-    return {
-        restrict: 'E',
-        templateUrl: 'app/directives/footer/footer-tmpl.html',
-        controller: 'footerCtrl'
-    };
-});
-//restrict with A,E, or AE
-'use strict';
-
 angular.module('dw-store').controller('inspirationCtrl', function ($scope) {});
 'use strict';
 
@@ -441,6 +423,24 @@ angular.module('dw-store').directive('inspirationDir', function () {
                 }]
             });
         }
+    };
+});
+//restrict with A,E, or AE
+'use strict';
+
+angular.module('dw-store').controller('footerCtrl', function ($scope) {
+
+    $scope.countries = [{ country: 'USA', flag: '../../../assets/img/flags/usa-flag.png' }, { country: 'Japan', flag: '../../../assets/img/flags/japan-flag.png' }, { country: 'France', flag: '../../../assets/img/flags/france-flag.png' }, { country: 'Germany', flag: '../../../assets/img/flags/germany-flag.png' }, { country: 'Taiwan', flag: '../../../assets/img/flags/taiwan-flag.png' }, { country: 'Great Britain', flag: '../../../assets/img/flags/uk-flag.png' }, { country: 'Sweden', flag: '../../../assets/img/flags/sweden-flag.png' }, { country: 'Australia', flag: '../../../assets/img/flags/australia-flag.png' }, { country: 'Korea', flag: '../../../assets/img/flags/korea-flag.png' }, { country: 'Italy', flag: '../../../assets/img/flags/italy-flag.png' }, { country: 'Denmark', flag: '../../../assets/img/flags/denmark-flag.png' }];
+    $scope.myCountry = $scope.countries[0];
+});
+'use strict';
+
+angular.module('dw-store').directive('footerDir', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/directives/footer/footer-tmpl.html',
+        controller: 'footerCtrl'
     };
 });
 //restrict with A,E, or AE
