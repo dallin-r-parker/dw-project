@@ -2,11 +2,10 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
-const sendgrid = require('../sendgrid');
 
 
 const app = module.exports = express();
-app.set('port', process.env.PORT || 3030)
+app.set('port', process.env.PORT || 3000)
 app.use(bodyParser.json());
 app.use(express.static(__dirname + './../public'))
 
