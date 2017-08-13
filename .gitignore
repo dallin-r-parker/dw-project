@@ -2,6 +2,7 @@ node_modules
 bower_components
 .DS_Store
 gulpfile.js
+.idea
 server_config.js
 sendgrid.js
 ./public/dist
