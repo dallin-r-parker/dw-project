@@ -5,4 +5,4 @@ gulpfile.js
 .idea
 server_config.js
 sendgrid.js
-./public/dist
+public/dist
